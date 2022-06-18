@@ -12,8 +12,6 @@ void mallam()
 
     //mallam_proceed: //Reference point
     printf("\n\t\t\t--------------------------------------------------------------\n");
-    printf("\n\t\t\tMALLAM'S CASTLE ASCII ART GOES HERE!!!!!!!!!!\n\n");
-    printf("\n\t\t\t--------------------------------------------------------------\n");
     printf("\n\n\t\t\tOh NO! The evil Mallam has caught you on the restricted halls\n");
     printf("\t\t\tof his grand Palace and has sent his dogs after you!\n");
     printf("\t\t\tThe halls of his palace are intertwined and confusing.\n");
@@ -21,7 +19,9 @@ void mallam()
     printf("\t\t\teven the residents sometimes don't know their way around.\n");
     printf("\t\t\t Use your adventuring expertise to escape this maze quickly\n");
     printf("\t\t\tbefore the guard dogs sniff you out and strike!\n");
+    printf("\n\n\t\t\t--------------------------------------------------------------\n");
 
+    Sleep(1000);
     printf("\nHere's a map of the Mallam's Palace,\n");
     mallam_map();
     printf("You can also access it at any point of the maze\n");
@@ -30,12 +30,12 @@ void mallam()
     // Remember when you're adding the inner navigations of the maze, 
     // that you also need to include M for Map at any point of the maze
 
-
+    Sleep(5000);
     printf("Fearless Adventurer, Select a difficulty!\n");
     printf("1: Walk in the Park\n");
     printf("2: Easy Peasy\n");
     printf("3: Normal Mode \n");
-    printf("4: Legendary Adventurer\n\t\t==>");
+    printf("4: Legendary Adventurer\n\t\t==> ");
     scanf("%d", &mode);
 
     switch (mode)
@@ -53,7 +53,7 @@ void mallam()
         printf("\nNormal Mode Activated. You have 5 minutes!\n");
         timer(5);
         Normal: //Reference Point
-        printf("\nTESTING MICROPHONE\n");
+        //printf("\nTESTING MICROPHONE\n");
         break;
     case 4:
         printf("\nEasy Mode Selected. You have 3 minutes!\n");
@@ -67,7 +67,7 @@ void mallam()
     }
 
     //mallam_start:
-    printf("Good Luck!");
+    printf("\nGood Luck!");
     /*Sleep(1000);
     system("cls");
     //system("color: 0b");
@@ -86,7 +86,7 @@ void mallam_map()
 
     if (count <=3)
     {
-        printf("\n// THE MAP DRAWING GOES HERE\n\n");
+        printf("\n<< THE MAP DRAWING GOES HERE>>\n\n");
     }
     else
     {
