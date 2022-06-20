@@ -6,10 +6,7 @@
 char maze;
 char name[15];
 char choice;
-
-
-//int timer(); //Timer for timed mode
-
+int mode;
 
 void main()
 {   
@@ -19,73 +16,89 @@ void main()
     printf("Enter Adventurer's name: ");
     scanf("%s", &name);
     
-    START:
+    START: //Reference Point
     Sleep(500);
     printf("\n\nWelcome %s, to the Recte-Sapere-Fons Maze of Doom!!!\n", name);
     Sleep(500);
-    printf("Select a location of choice:\n");
-    printf("A: Katanga Nation\n");
-    printf("B: Baluba Kingdom\n");
-    printf("C: Kalakuta Republic\n");
-    printf("D: Mallam's Palace\n");
-    printf("E: Random\n\t==> ");
-    scanf("%s", &maze);
-
-    switch (maze)
+    printf("Select an option:\n");
+    printf("1: Quick Play\n");
+    printf("2: Story Mode\n\t\t==> ");
+    scanf("%d", &mode);
+    
+    switch (mode)
     {
-    case 'A':
-        goto Mallam;
-        //katanga();
-        break;
-    case 'B':
-        goto Mallam; 
-        //baluba();
-        break;
-    case 'C':
-        goto Mallam;
-        //kalakuta();
-        break;
-    case 'D':
-        Mallam:
-        Sleep(500);
-        system("cls");
-        
-        printf("\n\t\t\t--------------------------------------------------------------\n");
-        printf("\n\t\t\t\t<<MALLAM'S CASTLE ASCII ART GOES HERE!>>\n\n");
-        printf("\n\t\t\t--------------------------------------------------------------\n");
-        printf("\n=========================================================\n");
-        printf("Welcome to the Magnificent Palace of the Great Mallam\n");
-        printf("A: Proceed (with Caution!)\n");
-        printf("X: Get me out of here!\n\t==> ");
-        
-        
-        mallam_proceed: //Reference point
-        scanf("%s", &choice);
+    case 1: //Quick Play
+    {
+        Quick_play:
+        //printf("You chose Quick Play:\n");
+        printf("\nSelect a location of choice:\n");
+        printf("A: Katanga Nation\n");
+        printf("B: Baluba Kingdom\n");
+        printf("C: Kalakuta Republic\n");
+        printf("D: Mallam's Palace\n");
+        printf("E: Random\n");
+        printf("-------------------------------------\n");
+        printf("X: Return to Mode Select\n\t==> ");
+        scanf("%s", &maze);
 
-        switch (choice)
+        switch (maze)
         {
-        case 'A':
-            mallam();
-            break;
-        
-        case 'X' :
-            goto START;
-            break;
-
-        default:
-            printf("\n--------------------------------------\n");
-            printf("\nERROR! Invalid Choice\n");
-            printf("Press A to Proceed into the Palace\n");
-            printf("Press X to Go Back\n\t==> ");
-            goto mallam_proceed;
+        case 'A': //Katanga
+        {
+            goto Mallam;
+            //katanga();
             break;
         }
-
-            //Move that part of the mallam function
-            //Move it here
-            //The part that says A to proceed and X to leave 
+        case 'B': //Baluba
+        {
+            goto Mallam; 
+            //baluba();
             break;
-        default:
+        }
+        case 'C': //Kalakuta
+        {
+            goto Mallam;
+            //kalakuta();
+            break;
+        }
+        case 'D': // Mallam
+        {
+            Mallam:
+            Sleep(500);
+            system("cls");
+            
+            printf("\n\t\t\t--------------------------------------------------------------\n\n\n\n");
+            printf("\n\n\n\n\n\t\t\t\t<<MALLAM'S CASTLE ASCII ART GOES HERE!>>\n\n");
+            printf("\n\n\n\n\n\t\t\t--------------------------------------------------------------\n\n\n");
+            printf("\n===============================================================\n");
+            printf("\nWelcome %s, to the Magnificent Palace of the Great Mallam\n", name);
+            printf("\n===============================================================\n");
+            printf("\nA: Proceed (with Caution!)\n");
+            printf("\nX: Get me out of here!\n\t==> ");
+            mallam_proceed: //Reference point
+            scanf("%s", &choice);
+
+            switch (choice)
+            {
+            case 'A': //Proceed
+                mallam();
+                break;
+            
+            case 'X' : //Exit
+                goto Quick_play;
+                break;
+
+            default:
+                printf("\n--------------------------------------\n");
+                printf("\nERROR! Invalid Choice\n");
+                printf("Press A to Proceed into the Palace\n");
+                printf("Press X to Go Back\n\t==> ");
+                goto mallam_proceed;
+                break;
+            }
+        }
+        default: //Error
+        {
             printf("\n------------------------------------------------------------------\n");
             printf("ERROR! Invalid Location\n");
             printf("Enter A to visit the Independent nation of Kalakuta in Asia\n");
@@ -93,42 +106,29 @@ void main()
             printf("Enter C to visit the Esteemed Kalakuta Republic in South America\n");
             printf("Enter D to visit The Mighty Mallam's Palace in Europe\n\n");
             Sleep(750);
-            goto START;
+            goto Quick_play;
             break;
+        }
+        
+        }
+
+    break;
+    }
+
+
+    case 2: //Story Mode
+    {
+        printf("You chose Story mode.");
+        break;
+    }
+
+
+    default: //Not Quick Play or Story Mode
+    {
+        printf("You have to choose story mode or quick play");
+        break;
+    }
     }
 
     return;
 }
-
-int timer(int m)
-{
-    int s=00;
-    s--;
-    time:
-    if(s<=00)
-        (s=59,m--);
-        --s;
-    if(m<= 00 && s<= 00)
-        return 0;
-
-    printf("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTime Left:\n");
-    printf("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t%02d:%02d", m,s);
-    Sleep(1000);
-    system("cls");
-    goto time;
-}
-
-    /*int mapCount(); //Counts the Number of times map has been used
-    {
-        int count = 0;
-
-        if (count <=3)
-        {
-            printf("<<<<< THE MAP GOES HERE  >>>>>");
-        }
-        else
-        {
-            printf("You have exceeded your allowed number of Map views. Goodluck!")
-        }
-        return 0;
-    }*/
