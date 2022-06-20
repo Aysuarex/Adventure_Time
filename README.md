@@ -17,13 +17,6 @@ There are 4 different locations to choose from to have your adventure:
 
 Each of these choices births a story of its own and they all have their own different challenges in form of mazes for the player to solve.
 
-There are a couple different difficulty levels to choose from. 
-1. Walk in the Park (This Diffieulty is not timed)
-2. Easy Peasy (Easy Mode, 10 minutes iiimit)
-3. Normal Mode (Easy Mode, 5 minutes iiimit)
-4. Legendary Adventurer (Easy Mode, 3 minutes iiimit)
-
-
-The game is timed, depending on the difficulty chosen by the player and the player is allowed a bird-eye view of the maze a limited number of times, to make it easier
+A bird-eye view of the maze is displayed on the screen throughout the entire duration of the maze
 
 ### Project By [Suara Ayomide](https://twitter.com/aysuarex)
