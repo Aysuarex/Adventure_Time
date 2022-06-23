@@ -4,7 +4,7 @@ void main()
 {
 
     /*
-    MAZE 1:
+    MAZE 1: mallam
     printf(
     "                                          |          \n"
     "   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa   \n"
@@ -12,7 +12,7 @@ void main()
     "   88aaa8   8aaa8   8aaa8aaa8aaa8   8aaa8   8aaa88   \n"
     "   88                          <         <      88   \n"
     "   88aaaa   aaaaa   aaaaa   aaaaa   aaaaa   aaaa88   \n"
-    "   888888   88888   88888   88888   88888   888888   \n"
+    "   888888   88888   88888 | 88888   88888   888888   \n"
     "   88aaa8aaa8aaa8aaa8aaaa   aaaa8aaa8aaa8aaa8aaa88   \n"
     "   88888888888888       <       888888888888888888   \n"
     "   88aaa8aaa8aaa8aaaa   aaaaaaaaaaaa8aaa8aaa8aaa88   \n"
@@ -34,7 +34,33 @@ void main()
     );
     */
     /*
-    MAZE2:
+    MAZE2: kalakuta
+    printf(
+    "   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
+    "   88                             X 88888888888888   \n"
+    "   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
+    "   888888   888888888   88888   88888           88   \n"
+    "   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
+    "   88           888888888   88888   88888   888888   \n"
+    "   88aaaa   aaaa8aaa8aaaa   aaaaa   8aaa8   8aaa88   \n"
+    "   888888   888888888               88888   888888   \n"
+    "   88aaaa   aaaa8aaa8aaaaaaaaaaaa   aaaaa   8aaa88   \n"
+    "  >     >        888888888888               888888   \n"
+    "   aaaaaa   aaaa8aaa8aaa8aaa8aaaaaaaaaaaa   aaaa88   \n"
+    "   888888 | 888888888888888888888     >     >     >  \n"
+    "   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaaa   aaaaaaaaaa   \n"
+    "   88           >           888888888 | 8888888888   \n"
+    "   88aaaa   aaaaaaaaa   aaaa8aaa8aaaa   aaaa8aaa88   \n"
+    "   888888   88888           88888           888888   \n"
+    "   88aaa8aaa8aaa8aaaa   aaaa8aaa8aaaa   aaaa8aaa88   \n"
+    "   8888888888   88888 | 88888   88888 | 8888888888   \n"
+    "   88aaa8aaaa   aaaaa   aaaaa   aaaaa   aaaa8aaa88   \n"
+    "   888888                 >         >       888888   \n"
+    "   88aaa8aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8aaa88   \n"
+    );
+    */
+    /*
+    MAZE3: baluba
     printf(
     "   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
     "  <      <       <  8888888888888888888888888   88   \n"
@@ -61,55 +87,29 @@ void main()
     );
     */
     /*
-    MAZE3:
-    printf(
-    "   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "   88                             X 88888888888888   \n"
-    "   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
-    "   888888   888888888   88888   88888           88   \n"
-    "   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
-    "   88           888888888   88888   88888   888888   \n"
-    "   88aaaa   aaaa8aaa8aaaa   aaaaa   8aaa8   8aaa88   \n"
-    "   888888   888888888               88888   888888   \n"
-    "   88aaaa   aaaa8aaa8aaaaaaaaaaaa   aaaaa   8aaa88   \n"
-    "  >     >        888888888888               888888   \n"
-    "   aaaaaa   aaaa8aaa8aaa8aaa8aaaaaaaaaaaa   aaaa88   \n"
-    "   888888 | 888888888888888888888     >     >     >  \n"
-    "   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaaa   aaaaaaaaaa   \n"
-    "   88           >           888888888 | 8888888888   \n"
-    "   88aaaa   aaaaaaaaa   aaaa8aaa8aaaa   aaaa8aaa88   \n"
-    "   888888   88888           88888           888888   \n"
-    "   88aaa8aaa8aaa8aaaa   aaaa8aaa8aaaa   aaaa8aaa88   \n"
-    "   8888888888   88888 | 88888   88888 | 8888888888   \n"
-    "   88aaa8aaaa   aaaaa   aaaaa   aaaaa   aaaa8aaa88   \n"
-    "   888888                 >         >       888888   \n"
-    "   88aaa8aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8aaa88   \n"
-    );
-    */
-    /*
-    MAZE4:
+    MAZE4: katanga
     printf(
     "   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
     "   888888                                       88   \n"
-    "   88aaa8aaa8   8aaa8aaa8aaa8   8aaa8aaa8   8aaa88   \n"
+    "   88aaa8aaaa   aaaaaaaaaaaaa   aaaaaaaaa   aaaa88   \n"
     "   88   88888   88888   88888   888888888   888888   \n"
-    "   88   8aaa8   8aaa8   8aaa8aaa8aaa8aaa8   8aaa88   \n"
+    "   88   aaaaa   8aaa8   aaaa8aaa8aaa8aaa8   aaaa88   \n"
     "   88           88888       <       88888     X 88   \n"
-    "   88   8aaa8   8aaa8   8aaa8   8aaa8aaa8   8aaa88   \n"
+    "   88   aaaaa   8aaa8   aaaaa   aaaa8aaa8   aaaa88   \n"
     "   88   88888   88888 | 88888 | 888888888   888888   \n"
-    "   88aaa8aaa8   8aaa8   8aaa8   8aaa8aaa8aaa8aaa88   \n"
+    "   88aaa8aaaa   aaaaa   aaaa8   8aaa8aaa8aaa8aaa88   \n"
     "   888888         <        88    <       <      88   \n"
-    "   88aaa8aaa8aaa8   8aaa8aaa8   8aaa8aaa8   8aaa88   \n"
+    "   88aaa8aaaaaaaa   aaaaaaaa8   aaaaaaaaa   aaaa88   \n"
     "   888888   88888 | 888888888   888888888   888888   \n"
-    "   88aaa8   8aaa8   8aaa8aaa8aaa8aaa8aaa8   8aaa88   \n"
+    "   88aaa8   aaaaa   aaaa8aaa8aaa8aaa8aaa8   aaaa88   \n"
     "   888888      <        888888888   88888 |     88   \n"
-    "   88aaa8   8aaa8aaa8aaa8aaa8aaaa   8aaa8   8aaa88   \n"
+    "   88aaaa   aaaaaaaaaaaa8aaa8aaaa   8aaa8   aaaa88   \n"
     "   88     | 88888888888888888       88888       88   \n"
-    "   88aaa8   8aaa8aaa8aaa8aaa8aaaa   aaaaa   8aaa88   \n"
+    "   88aaaa   aaaa8aaa8aaa8aaa8aaaa   aaaaa   aaaa88   \n"
     "   888888 | 888888888                     | 888888   \n"
-    "   88aaa8   8aaa8aaa8aaa8   8aaa8aaa8aaa8   8aaa88   \n"
-    "  <     <      888888888   8aaa8aaa8      <     <    \n"
-    "   aaaaa8aaa8aaa8aaa8aaa8aaa8aaa8aaa8aaa8aaa8aaaaa   \n"
+    "   88aaaa   aaaa8aaa8aaaa   aaaa8aaa8aaaa   aaaa88   \n"
+    "  <      <      888888888   8aaa8aaa8      <     <    \n"
+    "   aaaaaaaaaaaaa8aaa8aaa8aaa8aaa8aaa8aaaaaaaaaaaaa   \n"
     );
     */
     /*
