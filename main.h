@@ -2,16 +2,26 @@
 #define __MAIN_H__
 
 void main();
+
 void mallam();
-void kalakuta();
-void katanga();
-void baluba();
+void mallam_map();
+void mallam_pic();
 void mallam_treasure();
-void treasure2();
-void treasure3();
-//int timer_and_map(int m);
-//void timer(int m);
-//int mapCount();
+
+void kalakuta();
+void kalakuta_map();
+void kalakuta_pic();
+void kalakuta_treasure();
+
+void katanga();
+void katanga_map();
+void katanga_pic();
+void katanga_treasure();
+
+void baluba();
+void baluba_map();
+void baluba_pic();
+void baluba_treasure();
 
 
 #endif
