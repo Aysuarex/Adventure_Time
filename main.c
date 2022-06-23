@@ -1,3 +1,12 @@
+/**
+ * @file main.c
+ * @author Suara Ayomide (aysuarex@gmail.com)
+ * 
+ * main -
+ * 
+ * @date 2022-06-17
+ */
+
 #include <stdio.h>
 #include <windows.h>
 #include <string.h>
@@ -23,11 +32,11 @@ void main()
     printf("Select an option:\n");
     printf("1: Quick Play\n");
     printf("2: Story Mode\n\t\t==> ");
-    scanf("%d", &mode);
+    scanf("%s", &mode);
     
     switch (mode)
     {
-    case 1: //Quick Play
+    case '1': //Quick Play
     {
         Quick_play:
         //printf("You chose Quick Play:\n");
@@ -57,8 +66,7 @@ void main()
         }
         case 'C': //Kalakuta
         {
-            goto Mallam;
-            //kalakuta();
+            kalakuta();
             break;
         }
         case 'D': // Mallam
@@ -67,9 +75,9 @@ void main()
             Sleep(500);
             system("cls");
             
-            printf("\n\t\t\t--------------------------------------------------------------\n\n\n\n");
-            printf("\n\n\n\n\n\t\t\t\t<<MALLAM'S CASTLE ASCII ART GOES HERE!>>\n\n");
-            printf("\n\n\n\n\n\t\t\t--------------------------------------------------------------\n\n\n");
+            printf("\n\t-------------------------------------------------------\n\n\n\n");
+            printf("\n\n\n\n\n\t\t<<MALLAM'S CASTLE ASCII ART GOES HERE!>>\n\n");
+            printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
             printf("\n===============================================================\n");
             printf("\nWelcome %s, to the Magnificent Palace of the Great Mallam\n", name);
             printf("\n===============================================================\n");
@@ -85,6 +93,7 @@ void main()
                 break;
             
             case 'X' : //Exit
+                system("cls");
                 goto Quick_play;
                 break;
 
@@ -97,6 +106,11 @@ void main()
                 break;
             }
         }
+        case 'X':
+            system("cls");
+            goto START;
+            break;
+        
         default: //Error
         {
             printf("\n------------------------------------------------------------------\n");
@@ -116,16 +130,17 @@ void main()
     }
 
 
-    case 2: //Story Mode
+    case '2': //Story Mode
     {
-        printf("You chose Story mode.");
+        printf("\nYou chose Story mode.");
         break;
     }
 
 
     default: //Not Quick Play or Story Mode
     {
-        printf("You have to choose story mode or quick play");
+        printf("\nYou have to choose story mode or quick play\n");
+        goto START;
         break;
     }
     }
