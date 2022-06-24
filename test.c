@@ -1,3 +1,13 @@
+/**
+ * @file test.c
+ * @author Suara Ayomide (aysuarex@gmail.com) 
+ * 
+ *  main -
+ * 
+ * @date 2022-06-21
+ */
+
+
 #include <stdio.h>
 
 void main()
