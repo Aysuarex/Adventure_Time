@@ -18,9 +18,6 @@ char dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7, dir8, dir9;
 char dir2A, dir2B, dir5A, dir5B, dir5C, dir6A, dir7A, dir7B, dir7C;
 
 
-//You havent done 6A!!!!!!!
-
-
 void mallam()
 {
     char map;
@@ -446,12 +443,55 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                 goto point6;
                             }
                             else if (dir6 == 'F') //point6 forward
-                            {
-                                printf("\nLeading you astray to point 6A from here");
-                                //printf("\nReturning to last Choice Point...");
-                                //Sleep(500);
-                                //goto point6;
-                            }
+                            {    
+                                system("cls");
+                                mallam_map();
+                                printf("--------------------------------------------------------------\n");
+                                printf("\nYou have come to the next Choice Point\n ");
+                                point6A:
+                                {
+                                printf("\nSelect a direction: \n"); //At point 6A
+                                printf("Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
+                                scanf("%s", &dir6A);
+                                
+                                if (dir6A == 'L') //point6A left
+                                {
+                                    printf("\nOops! Dead-end");
+                                    printf("\nReturning to last Choice Point...\n");
+                                    Sleep(500);
+                                    goto point6A;
+                                }
+                                else if (dir6A == 'R') //point6A right
+                                {
+                                    printf("\nOops! Dead-end");
+                                    printf("\nReturning to last Choice Point...\n");
+                                    Sleep(500);
+                                    goto point6A;
+                                }
+                                //Since you cannot go forward
+                                //else if (dir6A == 'F') //point6A forward
+                                //{
+                                //    printf("\nOops! Dead-end");
+                                //    printf("\nReturning to last Choice Point...");
+                                //    Sleep(500);
+                                //    goto point6A;
+                                //}
+                                else if (dir6A =='B') //Back
+                                {
+                                    printf("\nReturning to last Choice Point...");
+                                    goto point6;
+                                }
+                                else if (dir6A == 'X') //exit
+                                {
+                                    goto mallam_start;
+                                }
+                                else //point6A else
+                                {
+                                    printf("\nERROR! Invalid direction");
+                                    goto point6A;
+                                }
+                                }
+                            }                       
                             else if (dir6 =='B')
                             {
                                 printf("\nReturning to last Choice Point...\n");
@@ -501,7 +541,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                     point5C:
                                     {
                                     printf("\nSelect a direction: \n"); //At point 5C
-                                    printf("Forward(F), Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
+                                    printf("Forward(F), Left(L) go Back(B) or exit maze(X)\n\t\t==> ");
                                     scanf("%s", &dir5C);
                                     
                                     if (dir5C == 'F') //point5C forward
