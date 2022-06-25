@@ -247,60 +247,60 @@ START      0     8888888888888    9B      9A 888888
                                                     
                                                     if (dir9C == 'L') //point9C left
                                                     {
-                                                    system("cls");
-                                                    kalakuta_map();
-                                                    printf("--------------------------------------------------------------\n");
-                                                    printf("\nYou have come to the next Choice Point\n ");
-                                                    point9D:
-                                                    {
-                                                    printf("\nSelect a direction: \n"); //At point X
-                                                    printf("Forward(F), Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
-                                                    scanf("%s", &dirX);
-                                                    
-                                                    if (dirX == 'L') //pointX left
-                                                    {
                                                         system("cls");
                                                         kalakuta_map();
                                                         printf("--------------------------------------------------------------\n");
                                                         printf("\nYou have come to the next Choice Point\n ");
-                                                    }
-                                                    else if (dirX == 'R') //pointX right
-                                                    {
-                                                        printf("\nOops! Dead-end");
-                                                        printf("\nReturning to last Choice Point...\n");
-                                                        Sleep(500);
-                                                        goto point8;
-                                                    }
-                                                    //Since you cannot go forward
-                                                    //else if (dirX == 'F') //point8 forward
-                                                    //{
-                                                    //    printf("\nOops! Dead-end");
-                                                    //    printf("\nReturning to last Choice Point...");
-                                                    //    Sleep(500);
-                                                    //    goto point8;
-                                                    //}
-                                                    else if (dirX =='B') //Back
-                                                    {
-                                                        printf("\nReturning to last Choice Point...");
-                                                        goto pointY;
-                                                    }
-                                                    else if (dirX == 'X') //exit
-                                                    {
-                                                        goto kalakuta_start;
-                                                    }
-                                                    else //pointX else
+                                                        point9D:
+                                                        {
+                                                        printf("\nSelect a direction: \n"); //At point 9D
+                                                        printf("Forward(F), Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
+                                                        scanf("%s", &dir9D);
+                                                        
+                                                        if (dir9D == 'F') //point9D forward
+                                                        {
+                                                            printf("\nOops! Dead-end");
+                                                            printf("\nReturning to last Choice Point...\n");
+                                                            Sleep(500);
+                                                            goto point9D;
+                                                        }
+                                                        else if (dir9D == 'R') //point9D right
+                                                        {
+                                                            printf("\nOops! Dead-end");
+                                                            printf("\nReturning to last Choice Point...\n");
+                                                            Sleep(500);
+                                                            goto point9D;
+                                                        }
+                                                        //Since you cannot go left
+                                                        //else if (dir9D == 'L') //point9D left
+                                                        //{
+                                                        //    printf("\nOops! Dead-end");
+                                                        //    printf("\nReturning to last Choice Point...");
+                                                        //    Sleep(500);
+                                                        //    goto point9D;
+                                                        //}
+                                                        else if (dir9D =='B') //Back
+                                                        {
+                                                            printf("\nReturning to last Choice Point...");
+                                                            goto point9C;
+                                                        }
+                                                        else if (dir9D == 'X') //exit
+                                                        {
+                                                            goto kalakuta_start;
+                                                        }
+                                                        else //point9D else
                                                     {
                                                         printf("\nERROR! Invalid direction");
-                                                        goto pointX;
+                                                        goto point9D;
                                                     }
+                                                        }
                                                     }
-                                                    }
-                                                    else if (dirX == 'R') //pointX right
+                                                    else if (dir9C == 'F') //point9C forward
                                                     {
                                                         printf("\nOops! Dead-end");
                                                         printf("\nReturning to last Choice Point...\n");
                                                         Sleep(500);
-                                                        goto point8;
+                                                        goto point9C;
                                                     }
                                                     //Since you cannot go to the right
                                                     //else if (dir9C == 'R') //point9C right
@@ -359,8 +359,54 @@ START      0     8888888888888    9B      9A 888888
                                             }
                                             else if (dir9A == 'F') //point9A forward
                                             {
-                                                printf("\nLeading Astray to 9Bii");
-                                            }
+                                                system("cls");
+                                                kalakuta_map();
+                                                printf("--------------------------------------------------------------\n");
+                                                printf("\nYou have come to the next Choice Point\n ");
+                                                point9Bii:
+                                                {
+                                                printf("\nSelect a direction: \n"); //At point 9Bii
+                                                printf("Forward(F), Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
+                                                scanf("%s", &dir9Bii);
+                                                
+                                                if (dir9Bii == 'L') //point9Bii left
+                                                {
+                                                    printf("\nOops! Dead-end");
+                                                    printf("\nReturning to last Choice Point...\n");
+                                                    Sleep(500);
+                                                    goto point9Bii;
+                                                }
+                                                else if (dir9Bii == 'R') //point9Bii right
+                                                {
+                                                    printf("\nOops! Dead-end");
+                                                    printf("\nReturning to last Choice Point...\n");
+                                                    Sleep(500);
+                                                    goto point9Bii;
+                                                }
+                                                //Since you cannot go forward
+                                                //else if (dirX == 'F') //point8 forward
+                                                //{
+                                                //    printf("\nOops! Dead-end");
+                                                //    printf("\nReturning to last Choice Point...");
+                                                //    Sleep(500);
+                                                //    goto point8;
+                                                //}
+                                                else if (dir9Bii =='B') //Back
+                                                {
+                                                    printf("\nReturning to last Choice Point...");
+                                                    goto point9A;
+                                                }
+                                                else if (dir9Bii == 'X') //exit
+                                                {
+                                                    goto kalakuta_start;
+                                                }
+                                                else //point9Bii else
+                                                {
+                                                    printf("\nERROR! Invalid direction");
+                                                    goto point9Bii;
+                                                }
+                                                }
+                                            }                                            
                                             //Since you cannot go to the right
                                             //else if (dir9A == 'R') //point9A right
                                             //{
@@ -912,8 +958,6 @@ START      0     8888888888888    9B      9A 888888
     }
 
     return;
-}
-}
 }
 
 
