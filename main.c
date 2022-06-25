@@ -74,7 +74,7 @@ void main()
             printf("\n\n\n\n\n\t\t<<Kalakuta Republic ASCII ART GOES HERE!>>\n\n");
             printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
             printf("\n===============================================================\n");
-            printf("\nWelcome %s, to the Magnificent Brottherhood: Kalakuta Republic\n", name);
+            printf("\nWelcome %s, to the Magnificent Brotherhood: Kalakuta Republic\n", name);
             printf("\n===============================================================\n");
             printf("\nA: Proceed (with Caution!)\n");
             printf("\nX: Get me out of here!\n\t==> ");
