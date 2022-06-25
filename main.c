@@ -66,8 +66,40 @@ void main()
         }
         case 'C': //Kalakuta
         {
-            kalakuta();
-            break;
+            kalakuta:
+            Sleep(500);
+            system("cls");
+            
+            printf("\n\t-------------------------------------------------------\n\n\n\n");
+            printf("\n\n\n\n\n\t\t<<Kalakuta Republic ASCII ART GOES HERE!>>\n\n");
+            printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
+            printf("\n===============================================================\n");
+            printf("\nWelcome %s, to the Magnificent Brottherhood: Kalakuta Republic\n", name);
+            printf("\n===============================================================\n");
+            printf("\nA: Proceed (with Caution!)\n");
+            printf("\nX: Get me out of here!\n\t==> ");
+            kalakuta_proceed: //Reference point
+            scanf("%s", &choice);
+
+            switch (choice)
+            {
+            case 'A': //Proceed
+                kalakuta();
+                break;
+            
+            case 'X' : //Exit
+                system("cls");
+                goto Quick_play;
+                break;
+
+            default:
+                printf("\n--------------------------------------\n");
+                printf("\nERROR! Invalid Choice\n");
+                printf("Press A to Proceed into the Palace\n");
+                printf("Press X to Go Back\n\t==> ");
+                goto kalakuta_proceed;
+                break;
+            }
         }
         case 'D': // Mallam
         {
