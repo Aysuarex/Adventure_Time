@@ -67,8 +67,8 @@ void kalakuta()
     88aaaa   aaaa8aaa8aaaaaaaaaaaa   aaaaa   8aaa88   
 START      0     8888888888888    9B      9A 888888   
     aaaaaa   aaaa8aaa8aaa8aaa8aaaaaaaaaaaa   aaaa88   
-    888888   888888888888888888888     8   9       END
-    88aaaa   aaaa8aaa8aaa8aaa8aaa8aaaa   aaaaaaaaaa   
+    888888   888888888   888888888     8   9       END
+    88aaaa   aaaa8aaa8   8aaa8aaa8aaaa   aaaaaaaaaa   
     88     1           2     888888888   8888888888   
     88aaaa   aaaaaaaaa   aaaa8aaa8aaaa   aaaa8aaa88   
     888888   88888     3     88888     7     888888   
@@ -661,8 +661,8 @@ START      0     8888888888888    9B      9A 888888
                 }
                 else if (dir3 == 'R') //point3 right
                 {
-                    printf("Oops! Dead-end");
-                    printf(" Returning to last Choice Point...");
+                    printf("\nOops! Dead-end");
+                    printf("\nReturning to last Choice Point...\n");
                     Sleep(500);
                     goto point3;
                 }
@@ -682,14 +682,13 @@ START      0     8888888888888    9B      9A 888888
                 }
                 }
             }
-            //since you cannot go to the left
-            //else if (dir2 == 'L') //point2 left
-            //{
-            //    printf("Oops! Dead-end");
-            //    printf(" Returning to last Choice Point...");
-            //    Sleep(500);
-            //    goto point2;
-            // }
+            else if (dir2 == 'L') //point2 left
+            {
+                printf("\nOops! Dead-end");
+                printf("\nReturning to last Choice Point...\n");
+                Sleep(500);
+                goto point2;
+            }
             else if (dir2 == 'F') //point2 forward
             {
                 printf("\nOops! Dead-end");
