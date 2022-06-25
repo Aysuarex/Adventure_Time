@@ -104,7 +104,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
         printf("\nYou have come to the next Choice Point\n ");
         point1:
         {
-        printf("\nSelect a direction: \n"); //At point 0
+        printf("\nSelect a direction: \n"); //At point 1
         printf("Forward(F), Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
         scanf("%s", &dir1);
         
@@ -116,7 +116,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
             printf("\nYou have come to the next Choice Point\n ");
             point2:
             {
-            printf("\nSelect a direction: \n"); //At point 0
+            printf("\nSelect a direction: \n"); //At point 2
             printf("Forward(F) or Left(L), go Back(B) or exit maze(X)\n\t\t==> ");
             scanf("%s", &dir2);
             if (dir2 == 'L') //point2 left
@@ -755,7 +755,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
             //    printf(" Returning to last Choice Point...");
             //    Sleep(500);
             //    goto point2;
-            // }
+            //}
             else if (dir2 == 'F') //point2 forward
             {
                 system("cls");
@@ -764,7 +764,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                 printf("\nYou have come to the next Choice Point\n ");
                 point2A:
                 {
-                printf("\nSelect a direction: \n"); //At point X
+                printf("\nSelect a direction: \n"); //At point 2A
                 printf("Forward(F), Left(L), Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
                 scanf("%s", &dir2A);
                 
