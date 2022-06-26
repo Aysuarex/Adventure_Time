@@ -212,6 +212,8 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                             scanf("%s", &proceed);
                                             if (proceed != '~')
                                                 main();
+                                            else
+                                                main();
                                         }
                                         else if (dir9 == 'L') //point9 left
                                         {
