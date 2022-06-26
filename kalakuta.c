@@ -208,6 +208,8 @@ START      0     8888888888888    9B      9A 888888
                                             scanf("%s", &proceed);
                                             if (proceed != '~')
                                                 main();
+                                            else
+                                                main();
                                         }
                                         else if (dir9 == 'L') //point9 left
                                         {
