@@ -11,7 +11,7 @@
 #include <windows.h>
 #include "main.h"
 
-//void kalakuta_map(); //fuction to draw the map for the kalakuta maze
+//void kalakuta_pointX(); //fuction to draw the map for the kalakuta maze
 
 char dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7, dir8, dir9;
 char dir0A, dir0B, dir0C, dir0D, dir4A, dir9A, dir9B, dir9C, dir9D, dir9Bii;
@@ -40,10 +40,10 @@ void kalakuta()
 
     Sleep(1000);
     printf("\n\n\nYou couldn't possibly know your way around the maze,\nbut the map will guide you\n\n\t==> Good Luck!");
-    printf("\n\nTIPS: \n1. Keeps your Eyes On The Map At All Times");
-    printf("\n2. Turn on <caps_lock> ");
-    printf("\n3. Maximize the window for full screen view");
-    printf("\n4. Type F, L, R, B or X to navigate within the maze");
+    printf("\n\n\nTIPS:");
+    printf("\n1. Turn on <caps_lock> ");
+    printf("\n2. Maximize the window for full screen view");
+    printf("\n3. Enter F, L, R, B or X to navigate within the maze");
     printf("\n\n\nEnter Any Button to Proceed");
     printf("\n\nPress X to exit\n\t\t==>  ");
     scanf("%s", &proceed);
@@ -80,7 +80,7 @@ START      0     8888888888888    9B      9A 888888
 */
 
     system("cls");
-    kalakuta_map();
+    kalakuta_point0();
     printf("--------------------------------------------------------------\n");
     printf("You are now within the maze");
     printf("\nYou're at your First Choice-Point ");
@@ -96,7 +96,7 @@ START      0     8888888888888    9B      9A 888888
     if (dir0 == 'R') //point0 right
     {   
         system("cls");
-        kalakuta_map();
+        kalakuta_point1();
         printf("\nYou have come to the next Choice Point\n ");
         point1:
         {
@@ -107,7 +107,7 @@ START      0     8888888888888    9B      9A 888888
         if (dir1 == 'L') //point1 left
         {
             system("cls");
-            kalakuta_map();
+            kalakuta_point2();
             printf("--------------------------------------------------------------\n");
             printf("\nYou have come to the next Choice Point\n ");
             point2:
@@ -118,7 +118,7 @@ START      0     8888888888888    9B      9A 888888
             if (dir2 == 'R') //point2 right
             {
                 system("cls");
-                kalakuta_map();
+                kalakuta_point3();
                 printf("--------------------------------------------------------------\n");
                 printf("\nYou have come to the next Choice Point\n ");
                 point3:
@@ -130,7 +130,7 @@ START      0     8888888888888    9B      9A 888888
                 if (dir3 == 'F') //point3 forward
                 {
                     system("cls");
-                    kalakuta_map();
+                    kalakuta_point4();
                     printf("--------------------------------------------------------------\n");
                     printf("\nYou have come to the next Choice Point\n ");
                     point4:
@@ -142,7 +142,7 @@ START      0     8888888888888    9B      9A 888888
                     if (dir4 == 'L') //point4 left
                     {
                         system("cls");
-                        kalakuta_map();
+                        kalakuta_point5();
                         printf("--------------------------------------------------------------\n");
                         printf("\nYou have come to the next Choice Point\n ");
                         point5:
@@ -154,7 +154,7 @@ START      0     8888888888888    9B      9A 888888
                         if (dir5 == 'F') //point5 forward
                         {
                             system("cls");
-                            kalakuta_map();
+                            kalakuta_point6();
                             printf("--------------------------------------------------------------\n");
                             printf("\nYou have come to the next Choice Point\n ");
                             point6:
@@ -166,7 +166,7 @@ START      0     8888888888888    9B      9A 888888
                             if (dir6 == 'L') //point6 left
                             {
                                 system("cls");
-                                kalakuta_map();
+                                kalakuta_point7();
                                 printf("--------------------------------------------------------------\n");
                                 printf("\nYou have come to the next Choice Point\n ");
                                 point7:
@@ -178,7 +178,7 @@ START      0     8888888888888    9B      9A 888888
                                 if (dir7 == 'F') //point7 forward
                                 {
                                     system("cls");
-                                    kalakuta_map();
+                                    kalakuta_point8();
                                     printf("--------------------------------------------------------------\n");
                                     printf("\nYou have come to the next Choice Point\n ");
                                     point8:
@@ -190,7 +190,7 @@ START      0     8888888888888    9B      9A 888888
                                     if (dir8 == 'R') //point8 right
                                     {
                                         system("cls");
-                                        kalakuta_map();
+                                        kalakuta_point9();
                                         printf("--------------------------------------------------------------\n");
                                         printf("\nYou have come to the next Choice Point\n ");
                                         point9:
@@ -214,7 +214,7 @@ START      0     8888888888888    9B      9A 888888
                                         else if (dir9 == 'L') //point9 left
                                         {
                                             system("cls");
-                                            kalakuta_map();
+                                            kalakuta_point9A();
                                             printf("--------------------------------------------------------------\n");
                                             printf("\nYou have come to the next Choice Point\n ");
                                             point9A:
@@ -226,7 +226,7 @@ START      0     8888888888888    9B      9A 888888
                                             if (dir9A == 'L') //pointX left
                                             {
                                                 system("cls");
-                                                kalakuta_map();
+                                                kalakuta_point9B();
                                                 printf("--------------------------------------------------------------\n");
                                                 printf("\nYou have come to the next Choice Point\n ");
                                                 point9B:
@@ -238,7 +238,7 @@ START      0     8888888888888    9B      9A 888888
                                                 if (dir9B == 'R') //point9B right
                                                 {
                                                     system("cls");
-                                                    kalakuta_map();
+                                                    kalakuta_point9C();
                                                     printf("--------------------------------------------------------------\n");
                                                     printf("\nYou have come to the next Choice Point\n ");
                                                     point9C:
@@ -250,7 +250,7 @@ START      0     8888888888888    9B      9A 888888
                                                     if (dir9C == 'L') //point9C left
                                                     {
                                                         system("cls");
-                                                        kalakuta_map();
+                                                        kalakuta_point9D();
                                                         printf("--------------------------------------------------------------\n");
                                                         printf("\nYou have come to the next Choice Point\n ");
                                                         point9D:
@@ -283,7 +283,9 @@ START      0     8888888888888    9B      9A 888888
                                                         //}
                                                         else if (dir9D =='B') //Back
                                                         {
-                                                            printf("\nReturning to last Choice Point...");
+                                                            system("cls");
+                                                            kalakuta_point9C();
+                                                            printf("\nReturning to last Choice Point...\n");
                                                             goto point9C;
                                                         }
                                                         else if (dir9D == 'X') //exit
@@ -314,7 +316,9 @@ START      0     8888888888888    9B      9A 888888
                                                     //}
                                                     else if (dir9C =='B') //Back
                                                     {
-                                                        printf("\nReturning to last Choice Point...");
+                                                        system("cls");
+                                                        kalakuta_point9B();
+                                                        printf("\nReturning to last Choice Point...\n");
                                                         goto point9B;
                                                     }
                                                     else if (dir9C == 'X') //exit
@@ -345,7 +349,9 @@ START      0     8888888888888    9B      9A 888888
                                                 //}
                                                 else if (dir9B =='B') //Back
                                                 {
-                                                    printf("\nReturning to last Choice Point...");
+                                                    system("cls");
+                                                    kalakuta_point9A();
+                                                    printf("\nReturning to last Choice Point...\n");
                                                     goto point9A;
                                                 }
                                                 else if (dir9B == 'X') //exit
@@ -362,7 +368,7 @@ START      0     8888888888888    9B      9A 888888
                                             else if (dir9A == 'F') //point9A forward
                                             {
                                                 system("cls");
-                                                kalakuta_map();
+                                                kalakuta_point9Bii();
                                                 printf("--------------------------------------------------------------\n");
                                                 printf("\nYou have come to the next Choice Point\n ");
                                                 point9Bii:
@@ -395,7 +401,9 @@ START      0     8888888888888    9B      9A 888888
                                                 //}
                                                 else if (dir9Bii =='B') //Back
                                                 {
-                                                    printf("\nReturning to last Choice Point...");
+                                                    system("cls");
+                                                    kalakuta_point9A();
+                                                    printf("\nReturning to last Choice Point...\n");
                                                     goto point9A;
                                                 }
                                                 else if (dir9Bii == 'X') //exit
@@ -419,7 +427,9 @@ START      0     8888888888888    9B      9A 888888
                                             //}
                                             else if (dir9A =='B') //Back
                                             {
-                                                printf("\nReturning to last Choice Point...");
+                                                system("cls");
+                                                kalakuta_point9();
+                                                printf("\nReturning to last Choice Point...\n");
                                                 goto point9;
                                             }
                                             else if (dir9A == 'X') //exit
@@ -447,6 +457,8 @@ START      0     8888888888888    9B      9A 888888
                                         //}
                                         else if (dir9 =='B')
                                         {
+                                            system("cls");
+                                            kalakuta_point8();
                                             printf("\nReturning to last Choice Point...\n");
                                             goto point8;
                                         }
@@ -474,6 +486,8 @@ START      0     8888888888888    9B      9A 888888
                                     //}
                                     else if (dir8 =='B')
                                     {
+                                        system("cls");
+                                        kalakuta_point7();
                                         printf("\nReturning to last Choice Point...\n");
                                         goto point7;
                                     }
@@ -504,7 +518,9 @@ START      0     8888888888888    9B      9A 888888
                                 }
                                 else if (dir7 =='B')
                                 {
-                                    printf("\nReturning to last Choice Point...\n");
+                                system("cls");
+                                kalakuta_point6();
+                                printf("\nReturning to last Choice Point...\n");
                                     goto point6;
                                 }
                                 else if (dir7 == 'X') //exit
@@ -535,6 +551,8 @@ START      0     8888888888888    9B      9A 888888
                             //}
                             else if (dir6 =='B')
                             {
+                                system("cls");
+                                kalakuta_point5();
                                 printf("\nReturning to last Choice Point...\n");
                                 goto point5;
                             }
@@ -570,6 +588,8 @@ START      0     8888888888888    9B      9A 888888
                         }
                         else if (dir5 =='B')
                         {
+                            system("cls");
+                            kalakuta_point4();
                             printf("\nReturning to last Choice Point...\n");
                             goto point4;
                         }
@@ -583,7 +603,7 @@ START      0     8888888888888    9B      9A 888888
                     else if (dir4 == 'R') //point4 right
                     {
                         system("cls");
-                        kalakuta_map();
+                        kalakuta_point4A();
                         printf("--------------------------------------------------------------\n");
                         printf("\nYou have come to the next Choice Point\n ");
                         point4A:
@@ -616,7 +636,9 @@ START      0     8888888888888    9B      9A 888888
                         //}
                         else if (dir4A =='B') //Back
                         {
-                            printf("\nReturning to last Choice Point...");
+                            system("cls");
+                            kalakuta_point4();
+                            printf("\nReturning to last Choice Point...\n");
                             goto point4;
                         }
                         else if (dir4A == 'X') //exit
@@ -644,6 +666,8 @@ START      0     8888888888888    9B      9A 888888
                     }
                     else if (dir4 =='B')
                     {
+                        system("cls");
+                        kalakuta_point3();
                         printf("\nReturning to last Choice Point...\n");
                         goto point3;
                     }
@@ -674,6 +698,8 @@ START      0     8888888888888    9B      9A 888888
                 }
                 else if (dir3 =='B')
                 {
+                    system("cls");
+                    kalakuta_point2();
                     printf("\nReturning to last Choice Point...\n");
                     goto point2;
                 }
@@ -704,7 +730,9 @@ START      0     8888888888888    9B      9A 888888
             }
             else if (dir2 =='B')
             {
-                printf("\nReturning to last Choice Point...");
+                system("cls");
+                kalakuta_point1();
+                printf("\nReturning to last Choice Point...\n");
                 goto point1;
             }
             else //point2 else
@@ -730,6 +758,8 @@ START      0     8888888888888    9B      9A 888888
         }
         else if (dir1 =='B')
         {
+            system("cls");
+            kalakuta_point0();
             printf("\nReturning to last Choice Point...\n");
             goto point0;
         }
@@ -747,7 +777,7 @@ START      0     8888888888888    9B      9A 888888
     else if (dir0 == 'L') //point0 left
     {
         system("cls");
-        kalakuta_map();
+        kalakuta_point0A();
         printf("--------------------------------------------------------------\n");
         printf("\nYou have come to the next Choice Point\n ");
         point0A:
@@ -759,7 +789,7 @@ START      0     8888888888888    9B      9A 888888
         if (dir0A == 'F') //pointX forward
         {
             system("cls");
-            kalakuta_map();
+            kalakuta_point0B();
             printf("--------------------------------------------------------------\n");
             printf("\nYou have come to the next Choice Point\n ");
             point0B:
@@ -771,7 +801,7 @@ START      0     8888888888888    9B      9A 888888
             if (dir0B == 'R') //pointX right
             {
                 system("cls");
-                kalakuta_map();
+                kalakuta_point0C();
                 printf("--------------------------------------------------------------\n");
                 printf("\nYou have come to the next Choice Point\n ");
                 point0C:
@@ -783,7 +813,7 @@ START      0     8888888888888    9B      9A 888888
                 if (dir0C == 'F') //point0C forward
                 {
                     system("cls");
-                    kalakuta_map();
+                    kalakuta_point0D();
                     printf("--------------------------------------------------------------\n");
                     printf("\nYou have come to the next Choice Point\n ");
                     point0D:
@@ -803,7 +833,7 @@ START      0     8888888888888    9B      9A 888888
                         if(proceed!= '~')
                         {
                             system("cls");
-                            kalakuta_map();
+                            kalakuta_point0D();
                             printf("\nReturning to last Choice Point...\n");
                             Sleep(500);
                             goto point0D;
@@ -811,7 +841,7 @@ START      0     8888888888888    9B      9A 888888
                         else
                         {
                             system("cls");
-                            kalakuta_map();
+                            kalakuta_point0D();
                             printf("\nReturning to last Choice Point...\n");
                             Sleep(500);
                             goto point0D;
@@ -834,7 +864,9 @@ START      0     8888888888888    9B      9A 888888
                     //}
                     else if (dir0D =='B') //Back
                     {
-                        printf("\nReturning to last Choice Point...");
+                        system("cls");
+                        kalakuta_point0C();
+                        printf("\nReturning to last Choice Point...\n");
                         goto point0C;
                     }
                     else if (dir0D == 'X') //exit
@@ -865,7 +897,9 @@ START      0     8888888888888    9B      9A 888888
                 //}
                 else if (dir0C =='B') //Back
                 {
-                    printf("\nReturning to last Choice Point...");
+                    system("cls");
+                    kalakuta_point0B();
+                    printf("\nReturning to last Choice Point...\n");
                     goto point0B;
                 }
                 else if (dir0C == 'X') //exit
@@ -896,7 +930,9 @@ START      0     8888888888888    9B      9A 888888
             //}
             else if (dir0B =='B') //Back
             {
-                printf("\nReturning to last Choice Point...");
+                system("cls");
+                kalakuta_point0A();
+                printf("\nReturning to last Choice Point...\n");
                 goto point0A;
             }
             else if (dir0B== 'X') //exit
@@ -926,7 +962,9 @@ START      0     8888888888888    9B      9A 888888
         }
         else if (dir0A =='B') //Back
         {
-            printf("\nReturning to last Choice Point...");
+            system("cls");
+            kalakuta_point0();
+            printf("\nReturning to last Choice Point...\n");
             goto point0;
         }
         else if (dir0A == 'X') //exit
@@ -965,7 +1003,7 @@ START      0     8888888888888    9B      9A 888888
 /*
     {
     system("cls");
-    kalakuta_map();
+    kalakuta_pointX();
     printf("--------------------------------------------------------------\n");
     printf("\nYou have come to the next Choice Point\n ");
     pointX:
@@ -977,7 +1015,7 @@ START      0     8888888888888    9B      9A 888888
     if (dirX == 'L') //pointX left
     {
         system("cls");
-        kalakuta_map();
+        kalakuta_pointX();
         printf("--------------------------------------------------------------\n");
         printf("\nYou have come to the next Choice Point\n ");
     }
