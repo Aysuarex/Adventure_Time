@@ -11,7 +11,7 @@
 #include <windows.h>
 #include "main.h"
 
-//void katanga_map(); //fuction to draw the map for the katanga maze
+//void katanga_point(); //fuction to draw the map for the katanga maze
 
 char dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7, dir8, dir9, dir10, dir11, dir12, dir13;
 char dir4A, dir4B, dir4C, dir4Cii, dir4D, dir4E, dir4F, dir12A, dir12B, dir12Bii;
@@ -25,21 +25,22 @@ void katanga()
 
     katanga_start: //Reference Point
     system("cls");
+
     printf("\n -----------------------------------------------------------------------------\n\n");
     printf("    Katanga is supposedly a nation of independence, however their practices,\n");
-    printf("    unorthodox living conditions and constant partying has made this great\n");
+    printf("    unorthodox living conditions and constant partying have made this great\n");
     printf("    nation inhabitable to outsiders & tourists such as yourself.\n");
-    printf("       You tried to interfer and convince the locals against their terrible\n");
-    printf("    way of life but the emperor of Katanga has gotten wind of this and has  \n");
+    printf("      You tried to interfer and convince the citizens against their terrible\n");
+    printf("    way of life but the emperor of Katanga has gotten word of this and has  \n");
     printf("    ordered that you be arrested and detained for execution.    RUN!!!!!!! \n\n\n");
     printf(" -----------------------------------------------------------------------------\n\n");
 
     Sleep(1000);
     printf("\n\nYou couldn't possibly know your left from your right,\nbut the map will guide you\n\n\t==> Good Luck!");
-    printf("\n\n\nTIPS: \n1. Keeps your Eyes On The Map At All Times");
-    printf("\n2. Turn on <caps_lock> ");
-    printf("\n3. Maximize the window for full screen view");
-    printf("\n4. Type F, L, R, B or X to navigate within the maze");
+    printf("\n\nTIPS:");
+    printf("\n1. Turn on <caps_lock> ");
+    printf("\n2. Maximize the window for full screen view");
+    printf("\n3. Enter F, L, R, B or X to navigate within the maze");
     printf("\n\n\nEnter Any Button to Proceed");
     printf("\n\nPress X to exit\n\t\t==>  ");
     scanf("%s", &proceed);
@@ -76,7 +77,7 @@ START      0     888888888   8aaa8aaa8     13    END
     );
 */
     system("cls");
-    katanga_map();
+    katanga_point0();
     printf("--------------------------------------------------------------\n");
     printf("You have found yourself within the Katanga Maze!");
     printf("\nYou're at your First Choice-Point ");
@@ -92,7 +93,7 @@ START      0     888888888   8aaa8aaa8     13    END
     if (dir0 == 'L') //point0 left
     {   
         system("cls");
-        katanga_map();
+        katanga_point1();
         printf("\nYou have come to the next Choice Point\n ");
         point1:
         {
@@ -103,7 +104,7 @@ START      0     888888888   8aaa8aaa8     13    END
         if (dir1 == 'F') //point1 forward
         {
             system("cls");
-            katanga_map();
+            katanga_point2();
             printf("--------------------------------------------------------------\n");
             printf("\nYou have come to the next Choice Point\n ");
             point2:
@@ -114,7 +115,7 @@ START      0     888888888   8aaa8aaa8     13    END
             if (dir2 == 'R') //point2 right
             {
                 system("cls");
-                katanga_map();
+                katanga_point3();
                 printf("--------------------------------------------------------------\n");
                 printf("\nYou have come to the next Choice Point\n ");
                 point3:
@@ -126,7 +127,7 @@ START      0     888888888   8aaa8aaa8     13    END
                 if (dir3 == 'L') //point3 left
                 {
                     system("cls");
-                    katanga_map();
+                    katanga_point4();
                     printf("--------------------------------------------------------------\n");
                     printf("\nYou have come to the next Choice Point\n ");
                     point4:
@@ -138,7 +139,7 @@ START      0     888888888   8aaa8aaa8     13    END
                     if (dir4 == 'R') //point4 right
                     {
                         system("cls");
-                        katanga_map();
+                        katanga_point5();
                         printf("--------------------------------------------------------------\n");
                         printf("\nYou have come to the next Choice Point\n ");
                         point5:
@@ -150,7 +151,7 @@ START      0     888888888   8aaa8aaa8     13    END
                         if (dir5 == 'L') //point5 left
                         {
                             system("cls");
-                            katanga_map();
+                            katanga_point6();
                             printf("--------------------------------------------------------------\n");
                             printf("\nYou have come to the next Choice Point\n ");
                             point6:
@@ -162,7 +163,7 @@ START      0     888888888   8aaa8aaa8     13    END
                             if (dir6 == 'R') //point6 right
                             {
                                 system("cls");
-                                katanga_map();
+                                katanga_point7();
                                 printf("--------------------------------------------------------------\n");
                                 printf("\nYou have come to the next Choice Point\n ");
                                 point7:
@@ -174,7 +175,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                 if (dir7 == 'R') //point7 right
                                 {
                                     system("cls");
-                                    katanga_map();
+                                    katanga_point8();
                                     printf("--------------------------------------------------------------\n");
                                     printf("\nYou have come to the next Choice Point\n ");
                                     point8:
@@ -186,7 +187,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                     if (dir8 == 'L') //point8 left
                                     {
                                         system("cls");
-                                        katanga_map();
+                                        katanga_point9();
                                         printf("--------------------------------------------------------------\n");
                                         printf("\nYou have come to the next Choice Point\n ");
                                         point9:
@@ -198,7 +199,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                         if (dir9 == 'R') //point9 right
                                         {
                                             system("cls");
-                                            katanga_map();
+                                            katanga_point10();
                                             printf("--------------------------------------------------------------\n");
                                             printf("\nYou have come to the next Choice Point\n ");
                                             point10:
@@ -210,7 +211,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                             if (dir10 == 'F') //point10 forward
                                             {
                                                 system("cls");
-                                                katanga_map();
+                                                katanga_point11();
                                                 printf("--------------------------------------------------------------\n");
                                                 printf("\nYou have come to the next Choice Point\n ");
                                                 point11:
@@ -222,7 +223,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                 if (dir11 == 'F') //point11 forward
                                                 {
                                                     system("cls");
-                                                    katanga_map();
+                                                    katanga_point12();
                                                     printf("--------------------------------------------------------------\n");
                                                     printf("\nYou have come to the next Choice Point\n ");
                                                     point12:
@@ -234,7 +235,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                     if (dir12 == 'F') //point12 forward
                                                     {
                                                         system("cls");
-                                                        katanga_map();
+                                                        katanga_point13();
                                                         printf("--------------------------------------------------------------\n");
                                                         printf("\nYou have come to the next Choice Point\n ");
                                                         point13:
@@ -272,7 +273,9 @@ START      0     888888888   8aaa8aaa8     13    END
                                                         //}
                                                         else if (dir13 =='B') //Back
                                                         {
-                                                            printf("\nReturning to last Choice Point...");
+                                                            system("cls");
+                                                            katanga_point12();
+                                                            printf("\nReturning to last Choice Point...\n");
                                                             goto point12;
                                                         }
                                                         else if (dir13 == 'X') //exit
@@ -289,7 +292,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                     else if (dir12 == 'R') //point10 right
                                                     {
                                                         system("cls");
-                                                        katanga_map();
+                                                        katanga_point12A();
                                                         printf("--------------------------------------------------------------\n");
                                                         printf("\nYou have come to the next Choice Point\n ");
                                                         point12A:
@@ -301,7 +304,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                         if (dir12A == 'R') //point12A right
                                                         {
                                                             system("cls");
-                                                            katanga_map();
+                                                            katanga_point12B();
                                                             printf("--------------------------------------------------------------\n");
                                                             printf("\nYou have come to the next Choice Point\n ");
                                                             point12B:
@@ -334,7 +337,9 @@ START      0     888888888   8aaa8aaa8     13    END
                                                             //}
                                                             else if (dir12B =='B') //Back
                                                             {
-                                                                printf("\nReturning to last Choice Point...");
+                                                                system("cls");
+                                                                katanga_point12A();
+                                                                printf("\nReturning to last Choice Point...\n");
                                                                 goto point12A;
                                                             }
                                                             else if (dir12B == 'X') //exit
@@ -351,7 +356,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                         else if (dir12A == 'F') //point12A forward
                                                         {
                                                             system("cls");
-                                                            katanga_map();
+                                                            katanga_point12Bii();
                                                             printf("--------------------------------------------------------------\n");
                                                             printf("\nYou have come to the next Choice Point\n ");
                                                             point12Bii:
@@ -384,7 +389,9 @@ START      0     888888888   8aaa8aaa8     13    END
                                                             //}
                                                             else if (dir12Bii =='B') //Back
                                                             {
-                                                                printf("\nReturning to last Choice Point...");
+                                                                system("cls");
+                                                                katanga_point12B();
+                                                                printf("\nReturning to last Choice Point...\n");
                                                                 goto point12B;
                                                             }
                                                             else if (dir12Bii == 'X') //exit
@@ -408,7 +415,9 @@ START      0     888888888   8aaa8aaa8     13    END
                                                         //}
                                                         else if (dir12A =='B') //Back
                                                         {
-                                                            printf("\nReturning to last Choice Point...");
+                                                            system("cls");
+                                                            katanga_point12();
+                                                            printf("\nReturning to last Choice Point...\n");
                                                             goto point12;
                                                         }
                                                         else if (dir12A == 'X') //exit
@@ -432,7 +441,9 @@ START      0     888888888   8aaa8aaa8     13    END
                                                     //}
                                                     else if (dir12 =='B') //Back
                                                     {
-                                                        printf("\nReturning to last Choice Point...");
+                                                        system("cls");
+                                                        katanga_point11();
+                                                        printf("\nReturning to last Choice Point...\n");
                                                         goto point11;
                                                     }
                                                     else if (dir12 == 'X') //exit
@@ -463,7 +474,9 @@ START      0     888888888   8aaa8aaa8     13    END
                                                 //}
                                                 else if (dir11 =='B') //Back
                                                 {
-                                                    printf("\nReturning to last Choice Point...");
+                                                    system("cls");
+                                                    katanga_point10();
+                                                    printf("\nReturning to last Choice Point...\n");
                                                     goto point10;
                                                 }
                                                 else if (dir11 == 'X') //exit
@@ -494,7 +507,9 @@ START      0     888888888   8aaa8aaa8     13    END
                                             //}
                                             else if (dir10 =='B') //Back
                                             {
-                                                printf("\nReturning to last Choice Point...");
+                                                system("cls");
+                                                katanga_point9();
+                                                printf("\nReturning to last Choice Point...\n");
                                                 goto point9;
                                             }
                                             else if (dir10 == 'X') //exit
@@ -529,6 +544,8 @@ START      0     888888888   8aaa8aaa8     13    END
                                         //}
                                         else if (dir9 =='B')
                                         {
+                                            system("cls");
+                                            katanga_point8();
                                             printf("\nReturning to last Choice Point...\n");
                                             goto point8;
                                         }
@@ -556,6 +573,8 @@ START      0     888888888   8aaa8aaa8     13    END
                                     //}
                                     else if (dir8 =='B')
                                     {
+                                        system("cls");
+                                        katanga_point7();
                                         printf("\nReturning to last Choice Point...\n");
                                         goto point7;
                                     }
@@ -587,6 +606,8 @@ START      0     888888888   8aaa8aaa8     13    END
                                 //}
                                 else if (dir7 =='B')
                                 {
+                                    system("cls");
+                                    katanga_point6();
                                     printf("\nReturning to last Choice Point...\n");
                                     goto point6;
                                 }
@@ -618,6 +639,8 @@ START      0     888888888   8aaa8aaa8     13    END
                             //}
                             else if (dir6 =='B')
                             {
+                                system("cls");
+                                katanga_point5();
                                 printf("\nReturning to last Choice Point...\n");
                                 goto point5;
                             }
@@ -653,6 +676,8 @@ START      0     888888888   8aaa8aaa8     13    END
                         }
                         else if (dir5 =='B')
                         {
+                            system("cls");
+                            katanga_point4();
                             printf("\nReturning to last Choice Point...\n");
                             goto point4;
                         }
@@ -666,7 +691,7 @@ START      0     888888888   8aaa8aaa8     13    END
                     else if (dir4 == 'L') //point4 left
                     {
                         system("cls");
-                        katanga_map();
+                        katanga_point4A();
                         printf("--------------------------------------------------------------\n");
                         printf("\nYou have come to the next Choice Point\n ");
                         point4A:
@@ -678,7 +703,7 @@ START      0     888888888   8aaa8aaa8     13    END
                         if (dir4A == 'R') //point4A right
                         {
                             system("cls");
-                            katanga_map();
+                            katanga_point4B();
                             printf("--------------------------------------------------------------\n");
                             printf("\nYou have come to the next Choice Point\n ");
                             point4B:
@@ -690,7 +715,7 @@ START      0     888888888   8aaa8aaa8     13    END
                             if (dir4B == 'F') //point4B forward
                             {
                                 system("cls");
-                                katanga_map();
+                                katanga_point4C();
                                 printf("--------------------------------------------------------------\n");
                                 printf("\nYou have come to the next Choice Point\n ");
                                 point4C:
@@ -702,7 +727,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                 if (dir4C == 'R') //point4C right
                                 {
                                     system("cls");
-                                    katanga_map();
+                                    katanga_point4D();
                                     printf("--------------------------------------------------------------\n");
                                     printf("\nYou have come to the next Choice Point\n ");
                                     point4D:
@@ -714,7 +739,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                     if (dir4D == 'F') //point4D forward
                                     {
                                         system("cls");
-                                        katanga_map();
+                                        katanga_point4E();
                                         printf("--------------------------------------------------------------\n");
                                         printf("\nYou have come to the next Choice Point\n ");
                                         point4E:
@@ -726,7 +751,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                         if (dir4E == 'R') //point4E right
                                         {
                                             system("cls");
-                                            katanga_map();
+                                            katanga_point4F();
                                             printf("--------------------------------------------------------------\n");
                                             printf("\nYou have come to the next Choice Point\n ");
                                             point4F:
@@ -746,7 +771,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                 if(proceed!= '~')
                                                 {
                                                     system("cls");
-                                                    katanga_map();
+                                                    katanga_point4F();
                                                     printf("\nReturning to last Choice Point...\n");
                                                     Sleep(500);
                                                     goto point4F;
@@ -754,7 +779,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                 else
                                                 {
                                                     system("cls");
-                                                    katanga_map();
+                                                    katanga_point4F();
                                                     printf("\nReturning to last Choice Point...\n");
                                                     Sleep(500);
                                                     goto point4F;
@@ -777,7 +802,9 @@ START      0     888888888   8aaa8aaa8     13    END
                                             //}
                                             else if (dir4F =='B') //Back
                                             {
-                                                printf("\nReturning to last Choice Point...");
+                                                system("cls");
+                                                katanga_point4E();
+                                                printf("\nReturning to last Choice Point...\n");
                                                 goto point4E;
                                             }
                                             else if (dir4F == 'X') //exit
@@ -807,7 +834,9 @@ START      0     888888888   8aaa8aaa8     13    END
                                         //}
                                         else if (dir4E =='B') //Back
                                         {
-                                            printf("\nReturning to last Choice Point...");
+                                            system("cls");
+                                            katanga_point4D();
+                                            printf("\nReturning to last Choice Point...\n");
                                             goto point4D;
                                         }
                                         else if (dir4E == 'X') //exit
@@ -838,7 +867,9 @@ START      0     888888888   8aaa8aaa8     13    END
                                     //}
                                     else if (dir4D =='B') //Back
                                     {
-                                        printf("\nReturning to last Choice Point...");
+                                        system("cls");
+                                        katanga_point4C();
+                                        printf("\nReturning to last Choice Point...\n");
                                         goto point4C;
                                     }
                                     else if (dir4D == 'X') //exit
@@ -869,7 +900,9 @@ START      0     888888888   8aaa8aaa8     13    END
                                 //}
                                 else if (dir4C =='B') //Back
                                 {
-                                    printf("\nReturning to last Choice Point...");
+                                    system("cls");
+                                    katanga_point4B();
+                                    printf("\nReturning to last Choice Point...\n");
                                     goto point4B;
                                 }
                                 else if (dir4C == 'X') //exit
@@ -886,7 +919,7 @@ START      0     888888888   8aaa8aaa8     13    END
                             else if (dir4B == 'L') //point4B left
                             {
                                 system("cls");
-                                katanga_map();
+                                katanga_point4Cii();
                                 printf("--------------------------------------------------------------\n");
                                 printf("\nYou have come to the next Choice Point\n ");
                                 point4Cii:
@@ -919,7 +952,9 @@ START      0     888888888   8aaa8aaa8     13    END
                                 //}
                                 else if (dir4Cii =='B') //Back
                                 {
-                                    printf("\nReturning to last Choice Point...");
+                                    system("cls");
+                                    katanga_point4B();
+                                    printf("\nReturning to last Choice Point...\n");
                                     goto point4B;
                                 }
                                 else if (dir4Cii == 'X') //exit
@@ -943,7 +978,9 @@ START      0     888888888   8aaa8aaa8     13    END
                             //}
                             else if (dir4B =='B') //Back
                             {
-                                printf("\nReturning to last Choice Point...");
+                                system("cls");
+                                katanga_point4A();
+                                printf("\nReturning to last Choice Point...\n");
                                 goto point4A;
                             }
                             else if (dir4B == 'X') //exit
@@ -974,7 +1011,9 @@ START      0     888888888   8aaa8aaa8     13    END
                         //}
                         else if (dir4A =='B') //Back
                         {
-                            printf("\nReturning to last Choice Point...");
+                            system("cls");
+                            katanga_point4();
+                            printf("\nReturning to last Choice Point...\n");
                             goto point4;
                         }
                         else if (dir4A == 'X') //exit
@@ -1002,6 +1041,8 @@ START      0     888888888   8aaa8aaa8     13    END
                     }
                     else if (dir4 =='B')
                     {
+                        system("cls");
+                        katanga_point3();
                         printf("\nReturning to last Choice Point...\n");
                         goto point3;
                     }
@@ -1033,6 +1074,8 @@ START      0     888888888   8aaa8aaa8     13    END
                 }
                 else if (dir3 =='B')
                 {
+                    system("cls");
+                    katanga_point2();
                     printf("\nReturning to last Choice Point...\n");
                     goto point2;
                 }
@@ -1064,7 +1107,9 @@ START      0     888888888   8aaa8aaa8     13    END
             }
             else if (dir2 =='B')
             {
-                printf("\nReturning to last Choice Point...");
+                system("cls");
+                katanga_point1();
+                printf("\nReturning to last Choice Point...\n");
                 goto point1;
             }
             else //point2 else
@@ -1091,6 +1136,8 @@ START      0     888888888   8aaa8aaa8     13    END
         }*/
         else if (dir1 =='B')
         {
+            system("cls");
+            katanga_point0();
             printf("\nReturning to last Choice Point...\n");
             goto point0;
         }
@@ -1139,7 +1186,7 @@ START      0     888888888   8aaa8aaa8     13    END
 /*
     {
     system("cls");
-    katanga_map();
+    katanga_pointX();
     printf("--------------------------------------------------------------\n");
     printf("\nYou have come to the next Choice Point\n ");
     pointX:
@@ -1151,7 +1198,7 @@ START      0     888888888   8aaa8aaa8     13    END
     if (dirX == 'L') //pointX left
     {
         system("cls");
-        katanga_map();
+        katanga_pointX();
         printf("--------------------------------------------------------------\n");
         printf("\nYou have come to the next Choice Point\n ");
     }
@@ -1160,19 +1207,21 @@ START      0     888888888   8aaa8aaa8     13    END
         printf("\nOops! Dead-end");
         printf("\nReturning to last Choice Point...\n");
         Sleep(500);
-        goto point8;
+        goto pointX;
     }
     //Since you cannot go forward
-    //else if (dirX == 'F') //point8 forward
+    //else if (dirX == 'F') //pointX forward
     //{
     //    printf("\nOops! Dead-end");
     //    printf("\nReturning to last Choice Point...");
     //    Sleep(500);
-    //    goto point8;
+    //    goto pointX;
     //}
     else if (dirX =='B') //Back
     {
-        printf("\nReturning to last Choice Point...");
+        system("cls");
+        katanga_pointY();
+        printf("\nReturning to last Choice Point...\n");
         goto pointY;
     }
     else if (dirX == 'X') //exit
