@@ -11,7 +11,7 @@
 #include <windows.h>
 #include "main.h"
 
-//void baluba_map(); //fuction to draw the map for the baluba maze
+//void baluba_pointX(); //fuction to draw the map for the baluba maze
 
 char dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7, dir8, dir9, dir10, dir11, dir12, dir13;
 char dir1A, dir2A, dir3A, dir12A, dir12B;
@@ -40,10 +40,10 @@ void baluba()
 
     Sleep(1000);
     printf("\nYou couldn't possibly know your left from your right,\nbut the map will guide you\n\n\t==> Good Luck!");
-    printf("\n\nTIPS: \n1. Keeps your Eyes On The Map At All Times");
-    printf("\n2. Turn on <caps_lock> ");
-    printf("\n3. Maximize the window for full screen view");
-    printf("\n4. Type F, L, R, B or X to navigate within the maze");
+    printf("\n\n\nTIPS:");
+    printf("\n1. Turn on <caps_lock> ");
+    printf("\n2. Maximize the window for full screen view");
+    printf("\n3. Enter F, L, R, B or X to navigate within the maze");
     printf("\n\n\nEnter Any Button to Proceed");
     printf("\n\nPress X to exit\n\t\t==>  ");
     scanf("%s", &proceed);
@@ -80,7 +80,7 @@ void baluba()
              END                                         \n"
 */
     system("cls");
-    baluba_map();
+    baluba_point0();
     printf("--------------------------------------------------------------\n");
     printf("You are now within the Baluba kingdom Cornfield.");
     printf("\nYou're at your First Choice-Point ");
@@ -96,7 +96,7 @@ void baluba()
     if (dir0 == 'R') //point0 right
     {   
         system("cls");
-        baluba_map();
+        baluba_point1();
         printf("\nYou have come to the next Choice Point\n ");
         point1:
         {
@@ -107,7 +107,7 @@ void baluba()
         if (dir1 == 'L') //point1 left
         {
             system("cls");
-            baluba_map();
+            baluba_point2();
             printf("--------------------------------------------------------------\n");
             printf("\nYou have come to the next Choice Point\n ");
             point2:
@@ -118,7 +118,7 @@ void baluba()
             if (dir2 == 'R') //point2 right
             {
                 system("cls");
-                baluba_map();
+                baluba_point3();
                 printf("--------------------------------------------------------------\n");
                 printf("\nYou have come to the next Choice Point\n ");
                 point3:
@@ -130,7 +130,7 @@ void baluba()
                 if (dir3 == 'L') //point3 left
                 {
                     system("cls");
-                    baluba_map();
+                    baluba_point4();
                     printf("--------------------------------------------------------------\n");
                     printf("\nYou have come to the next Choice Point\n ");
                     point4:
@@ -142,7 +142,7 @@ void baluba()
                     if (dir4 == 'R') //point4 right
                     {
                         system("cls");
-                        baluba_map();
+                        baluba_point5();
                         printf("--------------------------------------------------------------\n");
                         printf("\nYou have come to the next Choice Point\n ");
                         point5:
@@ -154,7 +154,7 @@ void baluba()
                         if (dir5 == 'F') //point5 forward
                         {
                             system("cls");
-                            baluba_map();
+                            baluba_point6();
                             printf("--------------------------------------------------------------\n");
                             printf("\nYou have come to the next Choice Point\n ");
                             point6:
@@ -166,7 +166,7 @@ void baluba()
                             if (dir6 == 'F') //point6 forward
                             {
                                 system("cls");
-                                baluba_map();
+                                baluba_point7();
                                 printf("--------------------------------------------------------------\n");
                                 printf("\nYou have come to the next Choice Point\n ");
                                 point7:
@@ -178,7 +178,7 @@ void baluba()
                                 if (dir7 == 'R') //point7 right
                                 {
                                     system("cls");
-                                    baluba_map();
+                                    baluba_point8();
                                     printf("--------------------------------------------------------------\n");
                                     printf("\nYou have come to the next Choice Point\n ");
                                     point8:
@@ -190,7 +190,7 @@ void baluba()
                                     if (dir8 == 'R') //point8 right
                                     {
                                         system("cls");
-                                        baluba_map();
+                                        baluba_point9();
                                         printf("--------------------------------------------------------------\n");
                                         printf("\nYou have come to the next Choice Point\n ");
                                         point9:
@@ -202,7 +202,7 @@ void baluba()
                                         if (dir9 == 'L') //point9 left
                                         {
                                             system("cls");
-                                            baluba_map();
+                                            baluba_point10();
                                             printf("--------------------------------------------------------------\n");
                                             printf("\nYou have come to the next Choice Point\n ");
                                             point10:
@@ -214,7 +214,7 @@ void baluba()
                                             if (dir10 == 'R') //point10 right
                                             {
                                                 system("cls");
-                                                baluba_map();
+                                                baluba_point11();
                                                 printf("--------------------------------------------------------------\n");
                                                 printf("\nYou have come to the next Choice Point\n ");
                                                 point11:
@@ -226,7 +226,7 @@ void baluba()
                                                 if (dir11 == 'L') //point11 left
                                                 {
                                                     system("cls");
-                                                    baluba_map();
+                                                    baluba_point12();
                                                     printf("--------------------------------------------------------------\n");
                                                     printf("\nYou have come to the next Choice Point\n ");
                                                     point12:
@@ -238,7 +238,7 @@ void baluba()
                                                     if (dir12 == 'L') //point12 left
                                                     {
                                                         system("cls");
-                                                        baluba_map();
+                                                        baluba_point13();
                                                         printf("--------------------------------------------------------------\n");
                                                         printf("\nYou have come to the next Choice Point\n ");
                                                         point13:
@@ -275,7 +275,9 @@ void baluba()
                                                         }
                                                         else if (dir13 =='B') //Back
                                                         {
-                                                            printf("\nReturning to last Choice Point...");
+                                                            system("cls");
+                                                            baluba_point12();
+                                                            printf("\nReturning to last Choice Point...\n");
                                                             goto point12;
                                                         }
                                                         else if (dir13 == 'X') //exit
@@ -292,7 +294,7 @@ void baluba()
                                                     else if (dir12 == 'R') //point10 right
                                                     {
                                                         system("cls");
-                                                        baluba_map();
+                                                        baluba_point12A();
                                                         printf("--------------------------------------------------------------\n");
                                                         printf("\nYou have come to the next Choice Point\n ");
                                                         point12A:
@@ -304,7 +306,7 @@ void baluba()
                                                         if (dir12A == 'F') //point12A forward
                                                         {
                                                             system("cls");
-                                                            baluba_map();
+                                                            baluba_point12B();
                                                             printf("--------------------------------------------------------------\n");
                                                             printf("\nYou have come to the next Choice Point\n ");
                                                             point12B:
@@ -337,7 +339,9 @@ void baluba()
                                                             //}
                                                             else if (dir12B =='B') //Back
                                                             {
-                                                                printf("\nReturning to last Choice Point...");
+                                                                system("cls");
+                                                                baluba_point12A();
+                                                                printf("\nReturning to last Choice Point...\n");
                                                                 goto point12A;
                                                             }
                                                             else if (dir12B == 'X') //exit
@@ -368,7 +372,9 @@ void baluba()
                                                         //}
                                                         else if (dir12A =='B') //Back
                                                         {
-                                                            printf("\nReturning to last Choice Point...");
+                                                            system("cls");
+                                                            baluba_point12();
+                                                            printf("\nReturning to last Choice Point...\n");
                                                             goto point12;
                                                         }
                                                         else if (dir12A == 'X') //exit
@@ -385,13 +391,15 @@ void baluba()
                                                     else if (dir12 == 'F') //point10 forward
                                                     {
                                                         printf("\nOops! Dead-end");
-                                                        printf("\nReturning to last Choice Point...");
+                                                        printf("\nReturning to last Choice Point...\n");
                                                         Sleep(500);
                                                         goto point12;
                                                     }
                                                     else if (dir12 =='B') //Back
                                                     {
-                                                        printf("\nReturning to last Choice Point...");
+                                                        system("cls");
+                                                        baluba_point11();
+                                                        printf("\nReturning to last Choice Point...\n");
                                                         goto point11;
                                                     }
                                                     else if (dir12 == 'X') //exit
@@ -422,7 +430,9 @@ void baluba()
                                                 //}
                                                 else if (dir11 =='B') //Back
                                                 {
-                                                    printf("\nReturning to last Choice Point...");
+                                                    system("cls");
+                                                    baluba_point10();
+                                                    printf("\nReturning to last Choice Point...\n");
                                                     goto point10;
                                                 }
                                                 else if (dir11 == 'X') //exit
@@ -453,7 +463,9 @@ void baluba()
                                             //}
                                             else if (dir10 =='B') //Back
                                             {
-                                                printf("\nReturning to last Choice Point...");
+                                                system("cls");
+                                                baluba_point9();
+                                                printf("\nReturning to last Choice Point...\n");
                                                 goto point9;
                                             }
                                             else if (dir10 == 'X') //exit
@@ -488,6 +500,8 @@ void baluba()
                                         //}
                                         else if (dir9 =='B')
                                         {
+                                            system("cls");
+                                            baluba_point8();
                                             printf("\nReturning to last Choice Point...\n");
                                             goto point8;
                                         }
@@ -515,6 +529,8 @@ void baluba()
                                     //}
                                     else if (dir8 =='B')
                                     {
+                                        system("cls");
+                                        baluba_point7();
                                         printf("\nReturning to last Choice Point...\n");
                                         goto point7;
                                     }
@@ -546,6 +562,8 @@ void baluba()
                                 //}
                                 else if (dir7 =='B')
                                 {
+                                    system("cls");
+                                    baluba_point6();
                                     printf("\nReturning to last Choice Point...\n");
                                     goto point6;
                                 }
@@ -577,6 +595,8 @@ void baluba()
                             //}
                             else if (dir6 =='B')
                             {
+                                system("cls");
+                                baluba_point5();
                                 printf("\nReturning to last Choice Point...\n");
                                 goto point5;
                             }
@@ -611,6 +631,8 @@ void baluba()
                         }
                         else if (dir5 =='B')
                         {
+                            system("cls");
+                            baluba_point4();
                             printf("\nReturning to last Choice Point...\n");
                             goto point4;
                         }
@@ -642,6 +664,8 @@ void baluba()
                     }
                     else if (dir4 =='B')
                     {
+                        system("cls");
+                        baluba_point3();
                         printf("\nReturning to last Choice Point...\n");
                         goto point3;
                     }
@@ -655,7 +679,7 @@ void baluba()
                 else if (dir3 == 'R') //point3 right
                 {
                     system("cls");
-                    baluba_map();
+                    baluba_point3A();
                     printf("--------------------------------------------------------------\n");
                     printf("\nYou have come to the next Choice Point\n ");
                     point3A:
@@ -688,7 +712,9 @@ void baluba()
                     //}
                     else if (dir3A =='B') //Back
                     {
-                        printf("\nReturning to last Choice Point...");
+                        system("cls");
+                        baluba_point3();
+                        printf("\nReturning to last Choice Point...\n");
                         goto point3;
                     }
                     else if (dir3A == 'X') //exit
@@ -716,6 +742,8 @@ void baluba()
                 }
                 else if (dir3 =='B')
                 {
+                    system("cls");
+                    baluba_point2();
                     printf("\nReturning to last Choice Point...\n");
                     goto point2;
                 }
@@ -728,15 +756,15 @@ void baluba()
             }
             else if (dir2 == 'L') //point2 left
             {
-                printf("Oops! Dead-end");
-                printf(" Returning to last Choice Point...");
+                printf("\nOops! Dead-end");
+                printf("\nReturning to last Choice Point...\n");
                 Sleep(500);
                 goto point2;
             }
             else if (dir2 == 'F') //point2 forward
             {
                 system("cls");
-                baluba_map();
+                baluba_point2A();
                 printf("--------------------------------------------------------------\n");
                 printf("\nYou have come to the next Choice Point\n ");
                 point2A:
@@ -756,7 +784,7 @@ void baluba()
                     if(proceed!= '~')
                     {
                         system("cls");
-                        baluba_map();
+                        baluba_point2A();
                         printf("\nReturning to last Choice Point...\n");
                         Sleep(500);
                         goto point2A;
@@ -764,7 +792,7 @@ void baluba()
                     else
                     {
                         system("cls");
-                        baluba_map();
+                        baluba_point2A();
                         printf("\nReturning to last Choice Point...\n");
                         Sleep(500);
                         goto point2A;
@@ -787,7 +815,9 @@ void baluba()
                 //}
                 else if (dir2A =='B') //Back
                 {
-                    printf("\nReturning to last Choice Point...");
+                    system("cls");
+                    baluba_point2();
+                    printf("\nReturning to last Choice Point...\n");
                     goto point2;
                 }
                 else if (dir2A == 'X') //exit
@@ -807,7 +837,9 @@ void baluba()
             }
             else if (dir2 =='B')
             {
-                printf("\nReturning to last Choice Point...");
+                system("cls");
+                baluba_point1();
+                printf("\nReturning to last Choice Point...\n");
                 goto point1;
             }
             else //point2 else
@@ -820,7 +852,7 @@ void baluba()
         else if (dir1 == 'R') //point1 right
         {
             system("cls");
-            baluba_map();
+            baluba_point1A();
             printf("--------------------------------------------------------------\n");
             printf("\nYou have come to the next Choice Point\n ");
             point1A:
@@ -853,7 +885,9 @@ void baluba()
             //}
             else if (dir1A =='B') //Back
             {
-                printf("\nReturning to last Choice Point...");
+                system("cls");
+                baluba_point1();
+                printf("\nReturning to last Choice Point...\n");
                 goto point1;
             }
             else if (dir1A == 'X') //exit
@@ -877,6 +911,8 @@ void baluba()
         }*/
         else if (dir1 =='B')
         {
+            system("cls");
+            baluba_point0();
             printf("\nReturning to last Choice Point...\n");
             goto point0;
         }
@@ -925,7 +961,7 @@ void baluba()
 /*
     {
     system("cls");
-    baluba_map();
+    baluba_pointX();
     printf("--------------------------------------------------------------\n");
     printf("\nYou have come to the next Choice Point\n ");
     pointX:
@@ -937,7 +973,7 @@ void baluba()
     if (dirX == 'L') //pointX left
     {
         system("cls");
-        baluba_map();
+        baluba_pointX();
         printf("--------------------------------------------------------------\n");
         printf("\nYou have come to the next Choice Point\n ");
     }
@@ -958,7 +994,9 @@ void baluba()
     //}
     else if (dirX =='B') //Back
     {
-        printf("\nReturning to last Choice Point...");
+        system("cls");
+        baluba_pointX();
+        printf("\nReturning to last Choice Point...\n");
         goto pointY;
     }
     else if (dirX == 'X') //exit
