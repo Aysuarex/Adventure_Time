@@ -12,7 +12,7 @@
 #include "main.h"
 //#include <conio.h>
 
-//void mallam_map(); //fuction to draw the map for the mallam maze
+//void mallam_pointX(); //fuction to draw the map for the mallam maze
 
 char dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7, dir8, dir9;
 char dir2A, dir2B, dir5A, dir5B, dir5C, dir6A, dir7A, dir7B, dir7C;
@@ -27,22 +27,27 @@ void mallam()
 
     mallam_start: //Reference Point
     system("cls");
+
     printf("\n    ---------------------------------------------------------------------\n\n");
-    printf("\tOh NO! The evil Mallam has caught you on the restricted halls\n");
+    printf("\tThe Mallam's castle is so magnificent and awesome! Everyone \n");
+    printf("\tsuspects however that the great Mallam is involved in some \n");
+    printf("\tshady business. This made you curious, so you decided to  \n");
+    printf("\texplore the parts of the palace out of bounds to visitors. \n");
+    printf("\n\t Oh NO! The evil Mallam has caught you on the restricted halls\n");
     printf("\tof his grand Palace and has sent his dogs after you!\n");
     printf("\tThe halls of his palace are intertwined and confusing.\n");
     printf("\tOne block always unfortunately leads to another and \n");
     printf("\teven the residents sometimes don't know their way around.\n");
     printf("\t Use your adventuring expertise to escape this maze quickly\n");
-    printf("\tbefore the guard dogs sniff you out and strike!\n\n\n");
+    printf("\tbefore the guard dogs sniff you out and strike!\n\n");
     printf("    ---------------------------------------------------------------------\n\n");
 
     Sleep(1000);
-    printf("\n\nYou couldn't possibly know your left from your right,\nbut the map will guide you\n\n\t==> Good Luck!");
-    printf("\n\n\nTIPS: \n1. Keeps your Eyes On The Map At All Times");
-    printf("\n2. Turn on <caps_lock> ");
-    printf("\n3. Maximize the window for full screen view");
-    printf("\n4. Type F, L, R, B or X to navigate within the maze");
+    printf("\nYou couldn't possibly know your left from your right,\nbut the map will guide you\n\n\t==> Good Luck!");
+    printf("\n\n\nTIPS:");
+    printf("\n1. Turn on <caps_lock> ");
+    printf("\n2. Maximize the window for full screen view");
+    printf("\n3. Enter F, L, R, B or X to navigate within the maze");
     printf("\n\n\nEnter Any Button to Proceed");
     printf("\n\nPress X to exit\n\t\t==>  ");
     scanf("%s", &proceed);
@@ -84,7 +89,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                           END
 */
     system("cls");
-    mallam_map();
+    mallam_point0();
     printf("--------------------------------------------------------------\n");
     printf("The Chase Has Now Begun!");
     printf("\nYou're at your First Choice-Point ");
@@ -100,7 +105,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
     if (dir0 == 'R') //point0 right
     {   
         system("cls");
-        mallam_map();
+        mallam_point1();
         printf("\nYou have come to the next Choice Point\n ");
         point1:
         {
@@ -111,7 +116,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
         if (dir1 == 'F') //point1 forward
         {
             system("cls");
-            mallam_map();
+            mallam_point2();
             printf("--------------------------------------------------------------\n");
             printf("\nYou have come to the next Choice Point\n ");
             point2:
@@ -122,7 +127,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
             if (dir2 == 'L') //point2 left
             {
                 system("cls");
-                mallam_map();
+                mallam_point3();
                 printf("--------------------------------------------------------------\n");
                 printf("\nYou have come to the next Choice Point\n ");
                 point3:
@@ -134,7 +139,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                 if (dir3 == 'R') //point3 right
                 {
                     system("cls");
-                    mallam_map();
+                    mallam_point4();
                     printf("--------------------------------------------------------------\n");
                     printf("\nYou have come to the next Choice Point\n ");
                     point4:
@@ -146,7 +151,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                     if (dir4 == 'L') //point4 left
                     {
                         system("cls");
-                        mallam_map();
+                        mallam_point5();
                         printf("--------------------------------------------------------------\n");
                         printf("\nYou have come to the next Choice Point\n ");
                         point5:
@@ -158,7 +163,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                         if (dir5 == 'F') //point5 forward
                         {
                             system("cls");
-                            mallam_map();
+                            mallam_point6();
                             printf("--------------------------------------------------------------\n");
                             printf("\nYou have come to the next Choice Point\n ");
                             point6:
@@ -170,7 +175,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                             if (dir6 == 'L') //point6 left
                             {
                                 system("cls");
-                                mallam_map();
+                                mallam_point7();
                                 printf("--------------------------------------------------------------\n");
                                 printf("\nYou have come to the next Choice Point\n ");
                                 point7:
@@ -182,7 +187,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                 if (dir7 == 'R') //point7 right
                                 {
                                     system("cls");
-                                    mallam_map();
+                                    mallam_point8();
                                     printf("--------------------------------------------------------------\n");
                                     printf("\nYou have come to the next Choice Point\n ");
                                     point8:
@@ -194,7 +199,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                     if (dir8 == 'L') //point8 left
                                     {
                                         system("cls");
-                                        mallam_map();
+                                        mallam_point9();
                                         printf("--------------------------------------------------------------\n");
                                         printf("\nYou have come to the next Choice Point\n ");
                                         point9:
@@ -236,6 +241,8 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                         //}
                                         else if (dir9 =='B')
                                         {
+                                            system("cls");
+                                            mallam_point8();
                                             printf("\nReturning to last Choice Point...\n");
                                             goto point8;
                                         }
@@ -263,6 +270,8 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                     //}
                                     else if (dir8 =='B')
                                     {
+                                        system("cls");
+                                        mallam_point7();
                                         printf("\nReturning to last Choice Point...\n");
                                         goto point7;
                                     }
@@ -280,7 +289,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                 else if (dir7 == 'L') //point7 left
                                 {
                                     system("cls");
-                                    mallam_map();
+                                    mallam_point7A();
                                     printf("--------------------------------------------------------------\n");
                                     printf("\nYou have come to the next Choice Point\n ");
                                     point7A:
@@ -292,7 +301,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                     if (dir7A == 'F') //point7A forward
                                     {
                                         system("cls");
-                                        mallam_map();
+                                        mallam_point7B();
                                         printf("--------------------------------------------------------------\n");
                                         printf("\nYou have come to the next Choice Point\n ");
                                         point7B:
@@ -304,7 +313,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                         if (dir7B == 'L') //point7B left
                                         {
                                             system("cls");
-                                            mallam_map();
+                                            mallam_point7C();
                                             printf("--------------------------------------------------------------\n");
                                             printf("\nYou have come to the next Choice Point\n ");
                                             point7C:
@@ -337,7 +346,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                             //}
                                             else if (dir7C =='B') //Back
                                             {
-                                                printf("\nReturning to last Choice Point...");
+                                                system("cls");
+                                                mallam_point7B();
+                                                printf("\nReturning to last Choice Point...\n");
                                                 goto point7B;
                                             }
                                             else if (dir7C == 'X') //exit
@@ -368,7 +379,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                         //}
                                         else if (dir7B =='B') //Back
                                         {
-                                            printf("\nReturning to last Choice Point...");
+                                            system("cls");
+                                            mallam_point7A();
+                                            printf("\nReturning to last Choice Point...\n");
                                             goto point7A;
                                         }
                                         else if (dir7B == 'X') //exit
@@ -399,7 +412,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                     //}
                                     else if (dir7A =='B') //Back
                                     {
-                                        printf("\nReturning to last Choice Point...");
+                                        system("cls");
+                                        mallam_point7();
+                                        printf("\nReturning to last Choice Point...\n");
                                         goto point7;
                                     }
                                     else if (dir7A == 'X') //exit
@@ -423,6 +438,8 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                 //}
                                 else if (dir7 =='B')
                                 {
+                                    system("cls");
+                                    mallam_point6();
                                     printf("\nReturning to last Choice Point...\n");
                                     goto point6;
                                 }
@@ -447,7 +464,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                             else if (dir6 == 'F') //point6 forward
                             {    
                                 system("cls");
-                                mallam_map();
+                                mallam_point6A();
                                 printf("--------------------------------------------------------------\n");
                                 printf("\nYou have come to the next Choice Point\n ");
                                 point6A:
@@ -480,7 +497,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                 //}
                                 else if (dir6A =='B') //Back
                                 {
-                                    printf("\nReturning to last Choice Point...");
+                                    system("cls");
+                                    mallam_point6();
+                                    printf("\nReturning to last Choice Point...\n");
                                     goto point6;
                                 }
                                 else if (dir6A == 'X') //exit
@@ -496,6 +515,8 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                             }                       
                             else if (dir6 =='B')
                             {
+                                system("cls");
+                                mallam_point5();
                                 printf("\nReturning to last Choice Point...\n");
                                 goto point5;
                             }
@@ -513,7 +534,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                         else if (dir5 == 'R') //point5 right
                         {
                             system("cls");
-                            mallam_map();
+                            mallam_point5A();
                             printf("--------------------------------------------------------------\n");
                             printf("\nYou have come to the next Choice Point\n ");
                             point5A:
@@ -525,7 +546,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                             if (dir5A == 'L') //point5A left
                             {
                                 system("cls");
-                                mallam_map();
+                                mallam_point5B();
                                 printf("--------------------------------------------------------------\n");
                                 printf("\nYou have come to the next Choice Point\n ");
                                 point5B:
@@ -537,7 +558,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                 if (dir5B == 'F') //point5B forward
                                 {
                                     system("cls");
-                                    mallam_map();
+                                    mallam_point5C();
                                     printf("--------------------------------------------------------------\n");
                                     printf("\nYou have come to the next Choice Point\n ");
                                     point5C:
@@ -557,7 +578,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                         if(proceed!= '~')
                                         {
                                             system("cls");
-                                            mallam_map();
+                                            mallam_point5C();
                                             printf("\nReturning to last Choice Point...\n");
                                             Sleep(500);
                                             goto point5C;
@@ -565,7 +586,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                         else
                                         {
                                             system("cls");
-                                            mallam_map();
+                                            mallam_point5C();
                                             printf("\nReturning to last Choice Point...\n");
                                             Sleep(500);
                                             goto point5C;
@@ -588,7 +609,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                     //}
                                     else if (dir5C =='B') //Back
                                     {
-                                        printf("\nReturning to last Choice Point...");
+                                        system("cls");
+                                        mallam_point5B();
+                                        printf("\nReturning to last Choice Point...\n");
                                         goto point5B;
                                     }
                                     else if (dir5C == 'X') //exit
@@ -619,7 +642,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                 //}
                                 else if (dir5B =='B') //Back
                                 {
-                                    printf("\nReturning to last Choice Point...");
+                                    system("cls");
+                                    mallam_point5A();
+                                    printf("\nReturning to last Choice Point...\n");
                                     goto point5A;
                                 }
                                 else if (dir5B == 'X') //exit
@@ -650,7 +675,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                             //}
                             else if (dir5A =='B') //Back
                             {
-                                printf("\nReturning to last Choice Point...");
+                                system("cls");
+                                mallam_point5();
+                                printf("\nReturning to last Choice Point...\n");
                                 goto point5;
                             }
                             else if (dir5A == 'X') //exit
@@ -678,6 +705,8 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                         }
                         else if (dir5 =='B')
                         {
+                            system("cls");
+                            mallam_point4();
                             printf("\nReturning to last Choice Point...\n");
                             goto point4;
                         }
@@ -709,6 +738,8 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                     }
                     else if (dir4 =='B')
                     {
+                        system("cls");
+                        mallam_point3();
                         printf("\nReturning to last Choice Point...\n");
                         goto point3;
                     }
@@ -740,6 +771,8 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                 }
                 else if (dir3 =='B')
                 {
+                    system("cls");
+                    mallam_point2();
                     printf("\nReturning to last Choice Point...\n");
                     goto point2;
                 }
@@ -761,7 +794,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
             else if (dir2 == 'F') //point2 forward
             {
                 system("cls");
-                mallam_map();
+                mallam_point2A();
                 printf("--------------------------------------------------------------\n");
                 printf("\nYou have come to the next Choice Point\n ");
                 point2A:
@@ -773,7 +806,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                 if (dir2A == 'F') //point2A forward
                 {
                     system("cls");
-                    mallam_map();
+                    mallam_point2B();
                     printf("--------------------------------------------------------------\n");
                     printf("\nYou have come to the next Choice Point\n ");
                     point2B:
@@ -805,7 +838,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                     }
                     else if (dir2B =='B') //Back
                     {
-                        printf("\nReturning to last Choice Point...");
+                        system("cls");
+                        mallam_point2A();
+                        printf("\nReturning to last Choice Point...\n");
                         goto point2A;
                     }
                     else if (dir2B == 'X') //exit
@@ -835,7 +870,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                 }
                 else if (dir2A =='B') //Back
                 {
-                    printf("\nReturning to last Choice Point...");
+                    system("cls");
+                    mallam_point2A();
+                    printf("\nReturning to last Choice Point...\n");
                     goto point2;
                 }
                 else if (dir2A == 'X') //exit
@@ -855,7 +892,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
             }
             else if (dir2 =='B')
             {
-                printf("\nReturning to last Choice Point...");
+                system("cls");
+                mallam_point1();
+                printf("\nReturning to last Choice Point...\n");
                 goto point1;
             }
             else //point2 else
@@ -881,6 +920,8 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
         }
         else if (dir1 =='B')
         {
+            system("cls");
+            mallam_point0();
             printf("\nReturning to last Choice Point...\n");
             goto point0;
         }
@@ -927,7 +968,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
 
 /*
     system("cls");
-    mallam_map();
+    mallam_pointX();
     printf("--------------------------------------------------------------\n");
     printf("\nYou have come to the next Choice Point\n ");
     pointX:
@@ -939,7 +980,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
     if (dirX == 'L') //pointX left
     {
         system("cls");
-        mallam_map();
+        mallam_pointX();
         printf("--------------------------------------------------------------\n");
         printf("\nYou have come to the next Choice Point\n ");
     }
@@ -960,7 +1001,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
     //}
     else if (dirX =='B') //Back
     {
-        printf("\nReturning to last Choice Point...");
+        system("cls");
+        mallam_pointY();
+        printf("\nReturning to last Choice Point...\n");
         goto pointY;
     }
     else if (dirX == 'X') //exit
