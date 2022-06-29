@@ -8,8 +8,10 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <windows.h>
 #include <string.h>
+#include <sys/time.h>
 #include "main.h"
 
 char maze;
@@ -19,7 +21,9 @@ int mode;
 
 void main()
 {   
+    game_start();
     system("cls");
+    system("color 07");
     printf("===================================\n");
     printf("WELCOME TO THE MAZE!\n");
     printf("Enter Adventurer's name: ");
@@ -39,8 +43,8 @@ void main()
     case '1': //Quick Play
     {
         Quick_play:
-        //printf("You chose Quick Play:\n");
-        printf("\nSelect a location of choice:\n");
+        system("color 07");
+        printf("\n\nSelect a location of choice:\n");
         printf("A: Katanga Nation\n");
         printf("B: Baluba Kingdom\n");
         printf("C: Kalakuta Republic\n");
@@ -53,18 +57,19 @@ void main()
         switch (maze)
         {
         case 'A': //Katanga
-{
+        {
             katanga:
             Sleep(500);
             system("cls");
+            system("color 0A");
             
-            printf("\n\t-------------------------------------------------------\n\n\n\n");
-            printf("\n\n\n\n\n\t\t<<KATANGA NATION ASCII ART GOES HERE!>>\n\n");
-            printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
-            printf("\n===============================================================\n");
+            //printf("\n\t-------------------------------------------------------\n\n\n\n");
+            katanga_pic();
+            //printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
+            printf("===============================================================\n");
             printf("\nWelcome %s, to the Mighty Independent Nation of Katanga.\n", name);
             printf("\n===============================================================\n");
-            printf("\nA: Proceed (with Caution!)\n");
+            printf("\nA: Proceed (with Caution!)");
             printf("\nX: Get me out of here!\n\t==> ");
             katanga_proceed: //Reference point
             scanf("%s", &choice);
@@ -94,12 +99,13 @@ void main()
             baluba:
             Sleep(500);
             system("cls");
+            system("color 0D");
             
-            printf("\n\t-------------------------------------------------------\n\n\n\n");
-            printf("\n\n\n\n\n\t\t<<BALUBA KINGDOM ASCII ART GOES HERE!>>\n\n");
-            printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
-            printf("\n===============================================================\n");
-            printf("\nWelcome %s, to the Mighty Independent Nation of Katanga.\n", name);
+            //printf("\n\t-------------------------------------------------------\n\n\n\n");
+            baluba_pic();
+            //printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
+            printf("\n\n\n===============================================================\n");
+            printf("\nWelcome %s, to the Kingdom of Baluba.\n", name);
             printf("\n===============================================================\n");
             printf("\nA: Proceed (with Caution!)\n");
             printf("\nX: Get me out of here!\n\t==> ");
@@ -131,13 +137,14 @@ void main()
             kalakuta:
             Sleep(500);
             system("cls");
+            system("color 0E");
             
-            printf("\n\t-------------------------------------------------------\n\n\n\n");
-            printf("\n\n\n\n\n\t\t<<Kalakuta Republic ASCII ART GOES HERE!>>\n\n");
-            printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
-            printf("\n===============================================================\n");
-            printf("\nWelcome %s, to the Magnificent Brotherhood: Kalakuta Republic\n", name);
-            printf("\n===============================================================\n");
+            //printf("\n\t-------------------------------------------------------\n\n\n\n");
+            kalakuta_pic();
+            //printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
+            printf("\n==================================================================\n");
+            printf("\nWelcome %s, to the Prestigious Brotherhood: Kalakuta Republic\n", name);
+            printf("\n==================================================================\n");
             printf("\nA: Proceed (with Caution!)\n");
             printf("\nX: Get me out of here!\n\t==> ");
             kalakuta_proceed: //Reference point
@@ -165,15 +172,16 @@ void main()
         }
         case 'D': // Mallam
         {
-            Mallam:
+            mallam:
             Sleep(500);
             system("cls");
-            
-            printf("\n\t-------------------------------------------------------\n\n\n\n");
-            printf("\n\n\n\n\n\t\t<<MALLAM'S CASTLE ASCII ART GOES HERE!>>\n\n");
-            printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
+            system("color 0B");
+
+            //printf("\n\t-------------------------------------------------------\n\n\n\n");
+            mallam_pic();
+            //printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
             printf("\n===============================================================\n");
-            printf("\nWelcome %s, to the Magnificent Palace of the Great Mallam\n", name);
+            printf("\nWelcome %s, to the Magnificent Castle of the Great Mallam\n", name);
             printf("\n===============================================================\n");
             printf("\nA: Proceed (with Caution!)\n");
             printf("\nX: Get me out of here!\n\t==> ");
@@ -200,6 +208,36 @@ void main()
                 break;
             }
         }
+
+        case 'E':
+            printf("\nSelecting Randomly...");
+            Sleep(1000);
+            srand(time(NULL));
+            int n;
+            n= rand() % 100;
+
+            if (n >= 0 && n<25)
+            {
+                goto mallam;
+            }
+            else if (n >= 25 && n<50)
+            {
+                goto baluba;
+            }
+            else if (n >= 50 && n<75)
+            {
+                goto kalakuta;
+            }
+            else if (n >= 75 && n<100)
+            {
+                goto katanga;
+            }
+            else
+            {
+                baluba();
+            }
+            break;
+
         case 'X':
             system("cls");
             goto START;
@@ -209,7 +247,7 @@ void main()
         {
             printf("\n------------------------------------------------------------------\n");
             printf("ERROR! Invalid Location\n");
-            printf("Enter A to visit the Independent nation of Kalakuta in Asia\n");
+            printf("Enter A to visit the Independent nation of Katanga in Asia\n");
             printf("Enter B to visit the Great Kingdom of Baluba in Africa\n");
             printf("Enter C to visit the Esteemed Kalakuta Republic in South America\n");
             printf("Enter D to visit The Mighty Mallam's Palace in Europe\n\n");
