@@ -36,7 +36,7 @@ void katanga()
     printf(" -----------------------------------------------------------------------------\n\n");
 
     Sleep(1000);
-    printf("\n\nYou couldn't possibly know your left from your right,\nbut the map will guide you\n\n\t==> Good Luck!");
+    printf("\n\nYou couldn't possibly know your left from your right,\nbut the satellite map will guide you\n\n\t==> Good Luck!");
     printf("\n\nTIPS:");
     printf("\n1. Turn on <caps_lock> ");
     printf("\n2. Maximize the window for full screen view");
@@ -252,9 +252,9 @@ START      0     888888888   8aaa8aaa8     13    END
                                                             printf("\n\n\n\nEnter Any Button to Proceed: ");
                                                             scanf("%s", &proceed);
                                                             if (proceed != '~')
-                                                                main();
+                                                                return;
                                                             else
-                                                                main();
+                                                                return;
                                                         }
                                                         else if (dir13 == 'R') //point13 right
                                                         {
