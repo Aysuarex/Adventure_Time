@@ -43,7 +43,7 @@ void mallam()
     printf("    ---------------------------------------------------------------------\n\n");
 
     Sleep(1000);
-    printf("\nYou couldn't possibly know your left from your right,\nbut the map will guide you\n\n\t==> Good Luck!");
+    printf("\nYou couldn't possibly know your left from your right,\nbut the satellite map will guide you\n\n\t==> Good Luck!");
     printf("\n\n\nTIPS:");
     printf("\n1. Turn on <caps_lock> ");
     printf("\n2. Maximize the window for full screen view");
@@ -216,9 +216,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                             printf("\n\n\nEnter Any Button to Proceed: ");
                                             scanf("%s", &proceed);
                                             if (proceed != '~')
-                                                main();
+                                                return;
                                             else
-                                                main();
+                                                return;
                                         }
                                         else if (dir9 == 'L') //point9 left
                                         {
