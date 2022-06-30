@@ -17,30 +17,94 @@
 char maze;
 char name[15];
 char choice;
-int mode;
+char mode;
+char button;
+
 
 void main()
 {   
     game_start();
     system("cls");
     system("color 07");
-    printf("===================================\n");
-    printf("WELCOME TO THE MAZE!\n");
-    printf("Enter Adventurer's name: ");
+    printf("\n ===================================\n");
+    printf(" WELCOME!\n");
+    printf(" Enter Adventurer's name: ");
     scanf("%s", &name);
     
     START: //Reference Point
     Sleep(500);
-    printf("\n\nWelcome %s, to the Recte-Sapere-Fons Maze of Doom!!!\n", name);
+    printf("\n\nWelcome Doctor %s, to Recte-Sapere-Fons Travels and Tours\n", name);
     Sleep(500);
-    printf("Select an option:\n");
-    printf("1: Quick Play\n");
-    printf("2: Story Mode\n\t\t==> ");
+    printf("\nSelect an option:\n");
+    printf("1: Story Mode\n");
+    printf("2: Quick Play\n\t\t==> ");
     scanf("%s", &mode);
     
     switch (mode)
     {
-    case '1': //Quick Play
+
+    case '1': //Story Mode
+    {
+        system("cls");
+        printf("\n\n--------------------------------------------------------------------------------");
+        printf("\n\n       Good Day Doctor %s, I am Adventurer Aysuarex and I", name);
+        printf("\n   will be in charge of this expedition. Think of me as a tour guide.");
+        printf("\n   My job is to make sure this world tour is one you'd never forget.");
+        printf("\n       Our adventure will take us through several prominent locations");
+        printf("\n   across four continents - Asia, Africa, South America and Europe.");
+        printf("\n       Bear in mind though, that some of these places could be dangerous,");
+        printf("\n   especially for a curious mind such as yourself, but as long as we all");
+        printf("\n   follow instructions and protocol, we'll be fine.");
+        printf("\n\n   With that said, shall we begin our journey?\n");
+        printf("\n\n--------------------------------------------------------------------------------");
+
+        printf("\n\n\nEnter any button to proceed ");
+        printf("\n\nEnter X to return to Mode Select Menu\n\t\t==> ");
+        scanf("%s", &button);
+
+        if (button != 'X')
+        {
+            katanga_story();
+            goto END;
+        }
+        else
+        {
+            system("cls");
+            goto START;
+        }
+
+        END:
+        system("cls");
+        printf("\n\n--------------------------------------------------------------------------------");
+        printf("\n\n      I'm amazed Doc, you seem to have a nose for trouble. Like a magnet of");
+        printf("\n  sorts. It's funny when you think about it actually. Well, that concludes our");
+        printf("\n  world tour. It has been as thrilling and exhilarating as it's been educative.");
+        printf("\n      We visited over 50 countries with over 300 landmarks, Museums, Stadiums,");
+        printf("\n  Parks and Sport Centres, heard over a hundred languages, paid homage to");
+        printf("\n  several dynasties and even interacted with the locals across four continents.");
+        printf("\n  These past few months have been wonderful and it's been really great");
+        printf("\n  getting to know you.");
+        printf("\n  It has been a fulfilling trip. My name once again, is Adventurer Aysuarex");
+        printf("\n  and you can reach out to me at aysuarex@gmail.com for more amazing tours");
+        printf("\n  like this one.");
+        printf("\n  Have a safe flight home. Bye-Bye!");
+        printf("\n\n--------------------------------------------------------------------------------");
+        
+        printf("\n\n\nEnter any button to proceed: ");
+        scanf("%s", &button);
+
+        if (button != 'X')
+            system("cls");
+            goto START;
+        else
+            system("cls");
+            goto START;
+
+        //break;
+    }
+
+
+    case '2': //Quick Play
     {
         Quick_play:
         system("color 07");
@@ -78,6 +142,7 @@ void main()
             {
             case 'A': //Proceed
                 katanga();
+                goto Quick_play;
                 break;
             
             case 'X' : //Exit
@@ -116,6 +181,7 @@ void main()
             {
             case 'A': //Proceed
                 baluba();
+                goto Quick_play;
                 break;
             
             case 'X' : //Exit
@@ -154,6 +220,7 @@ void main()
             {
             case 'A': //Proceed
                 kalakuta();
+                goto Quick_play;
                 break;
             
             case 'X' : //Exit
@@ -192,6 +259,7 @@ void main()
             {
             case 'A': //Proceed
                 mallam();
+                goto Quick_play;
                 break;
             
             case 'X' : //Exit
@@ -262,16 +330,10 @@ void main()
     }
 
 
-    case '2': //Story Mode
-    {
-        printf("\nYou chose Story mode.");
-        break;
-    }
-
 
     default: //Not Quick Play or Story Mode
     {
-        printf("\nYou have to choose story mode or quick play\n");
+        printf("\nYou have to choose either Quick Play(1) or Story Mode(2)\n");
         goto START;
         break;
     }
