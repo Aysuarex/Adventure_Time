@@ -31,7 +31,7 @@ void baluba()
     printf("    with no sense of decency. They are also carnibals who enjoy feasting  \n");
     printf("    on poor unsuspecting tourists who visit this supposedly great kingdom.  \n");
     printf("        The locals who noticed your presence amongst them were planning to   \n");
-    printf("    attack you in the night while you sleep but you overheard their plans   \n");
+    printf("    attack you in the night while you slept but you overheard their plans   \n");
     printf("    and escaped just before they arrived.    \n");
     printf("        They are however very hot on your trail as they have chased you   \n");
     printf("    into a cornfield maze. Escape this maze quickly before you become meat   \n");
@@ -39,7 +39,7 @@ void baluba()
     printf(" -----------------------------------------------------------------------------\n\n");
 
     Sleep(1000);
-    printf("\nYou couldn't possibly know your left from your right,\nbut the map will guide you\n\n\t==> Good Luck!");
+    printf("\nYou couldn't possibly know your left from your right,\nbut the satellite map will guide you\n\n\t==> Good Luck!");
     printf("\n\n\nTIPS:");
     printf("\n1. Turn on <caps_lock> ");
     printf("\n2. Maximize the window for full screen view");
@@ -255,9 +255,9 @@ void baluba()
                                                             printf("\n\n\n\nEnter Any Button to Proceed: ");
                                                             scanf("%s", &proceed);
                                                             if (proceed != '~')
-                                                                main();
+                                                                return;
                                                             else
-                                                                main();
+                                                                return;
                                                         }
                                                         else if (dir13 == 'R') //point13 right
                                                         {
