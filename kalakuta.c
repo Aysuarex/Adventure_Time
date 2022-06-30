@@ -39,7 +39,7 @@ void kalakuta()
     printf("-------------------------------------------------------------------------------\n");
 
     Sleep(1000);
-    printf("\n\n\nYou couldn't possibly know your way around the maze,\nbut the map will guide you\n\n\t==> Good Luck!");
+    printf("\n\n\nYou couldn't possibly know your way around the maze,\nbut the satellite map will guide you\n\n\t==> Good Luck!");
     printf("\n\n\nTIPS:");
     printf("\n1. Turn on <caps_lock> ");
     printf("\n2. Maximize the window for full screen view");
@@ -207,9 +207,9 @@ START      0     8888888888888    9B      9A 888888
                                             printf("\n\n\n\nEnter Any Button to Proceed: ");
                                             scanf("%s", &proceed);
                                             if (proceed != '~')
-                                                main();
+                                                return;
                                             else
-                                                main();
+                                                return;
                                         }
                                         else if (dir9 == 'L') //point9 left
                                         {
