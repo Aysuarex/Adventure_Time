@@ -2,7 +2,11 @@
  * @file game_story.c
  * @author Suara Ayomide (aysuarex@gmail.com)
  * 
- * @brief 
+ * game_start - function for start of game options
+ * katanga_story - storyline for the katanga location
+ * baluba_story - Storyline for the baluba location
+ * kalakuta_story - Storyline for the kalakuta location
+ * mallam_story - Storyline for the mallam location
  * 
  * @date 2022-06-29
  * 
@@ -15,7 +19,6 @@
 
 char button;
 
-
 void game_start()
 {
     char option;
@@ -23,12 +26,16 @@ void game_start()
 
     Beginning:
     system("cls");
-
-    printf("\n\t\t-----------------------------------------------------\n");
-    printf("\n\t\t  <<<<<  ADVENTURE TIME ASCII ART GOES HERE  >>>>>>\n");
-    printf("\n\t\t-----------------------------------------------------\n");
+    printf("\n      -------------------------------------------------------------------\n");
+    printf(
+    "        __  __   _   _  ___ __  _ _____ _  _ ___ ___   _____ _ __ __ ___   \n"
+    "       /  \\| _\\ | \\ / || __|  \\| |_   _| || | _ \\ __| |_   _| |  V  | __|  \n"
+    "      | /\\ | v |`\\ V /'| _|| | ' | | | | \\/ | v / _|    | | | | \\_/ | _|   \n" 
+    "      |_||_|__/   \\_/  |___|_|\\__| |_|  \\__/|_|_\\___|   |_| |_|_| |_|___|  \n" 
+    );
+    printf("\n      -------------------------------------------------------------------\n");
     
-    printf("\n1: START GAME \n");
+    printf("\n\n1: START GAME \n");
     printf("\n2: INSTRUCTIONS \n");
     printf("\n3: ABOUT GAME \n");
     printf("\n4: EXIT \n\t\t==> ");
@@ -108,7 +115,25 @@ void katanga_story()
     scanf("%s", &button);
     if (button != '~')
     {
-        katanga();
+        katanga:
+        Sleep(500);
+        system("cls");
+        system("color 0A");
+        
+        katanga_pic();
+        printf("===============================================================\n");
+        printf("\n   Welcome, to the Mighty Independent Nation of Katanga.\n");
+        printf("\n===============================================================\n");
+        printf("\n\nEnter any button to continue: ");
+        scanf("%s", &button);
+        if (button != '~')
+        {
+            katanga();
+        }
+        else
+        {
+            katanga();
+        }
     }
     else
     {
@@ -138,7 +163,25 @@ void baluba_story()
     scanf("%s", &button);
     if (button != '~')
     {
-        baluba();
+        baluba:
+        Sleep(500);
+        system("cls");
+        system("color 0D");
+        
+        baluba_pic();
+        printf("\n\n\n===============================================================\n");
+        printf("\nWelcome, to the Kingdom of Baluba.\n");
+        printf("\n===============================================================\n");
+        printf("\n\nEnter any button to continue: ");
+        scanf("%s", &button);
+        if (button != '~')
+        {
+            baluba();
+        }
+        else
+        {
+            baluba();
+        }
     }
     else
     {
@@ -173,7 +216,24 @@ void kalakuta_story()
     scanf("%s", &button);
     if (button != '~')
     {
-        kalakuta();
+        Sleep(500);
+        system("cls");
+        system("color 0E");
+        
+        kalakuta_pic();
+        printf("\n==================================================================\n");
+        printf("\nWelcome, to the Prestigious Brotherhood: Kalakuta Republic\n");
+        printf("\n==================================================================\n");
+        printf("\n\nEnter any button to continue: ");
+        scanf("%s", &button);
+        if (button != '~')
+        {
+            kalakuta();
+        }
+        else
+        {
+            kalakuta();
+        }
     }
     else
     {
@@ -207,7 +267,25 @@ void mallam_story()
     scanf("%s", &button);
     if (button != '~')
     {
-        mallam();
+        mallam:
+        Sleep(500);
+        system("cls");
+        system("color 0B");
+
+        mallam_pic();
+        printf("\n===============================================================\n");
+        printf("\nWelcome, to the Magnificent Castle of the Great Mallam\n");
+        printf("\n===============================================================\n");
+        printf("\n\nEnter any button to continue: ");
+        scanf("%s", &button);
+        if (button != '~')
+        {
+            mallam();
+        }
+        else
+        {
+            mallam();
+        }
     }
     else
     {
