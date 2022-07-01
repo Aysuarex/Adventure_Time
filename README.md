@@ -1,22 +1,51 @@
-# MAZE 
+# ADVENTURE TIME 
 
-## Still Building: Not Ready Yet! ⛑️ 🔨 ⚒️
+## Introduction 👀
 
-## Introduction :eyes: 
-This is a single player Maze Adventure game made in C language.It's a really fun game to play!
-You are an adventurer who ---
+A first-person maze-based adventure game with a captivating storyline about adventurers going on a world tour to amazing tourist attractions and landmaeks all over the world, across four continentswith each loction holding unforseen dangers of their own waiting for the unsuspecting adventurers.
 
+## About The Game 😍 
+---
 
-## How To Play :rocket:
+There are two Modes to choose from:
+1. Story Mode (Recommended)
+2. Quick Play
 
-There are 4 different locations to choose from to have your adventure:
+There are 4 different locations within the game:
+1. Katanga Nation
+1. Baluba Kingdom
 1. Kalakuta Republic
-2. Baluba Kingdom
-3. Katanga Nation
-4. Mallam's Palace
+1. Mallam's Palace
 
 Each of these choices births a story of its own and they all have their own different challenges in form of mazes for the player to solve.
 
-A bird-eye view of the maze is displayed on the screen throughout the entire duration of the maze
+The Quick Play mode also features a fifth location option- "Random" in case you're into surprises or you're feeling lucky.
 
-### Project By [Suara Ayomide](https://twitter.com/aysuarex)
+The game also features a (not-so-)hidden treasure chest within every maze.
+
+## How To Play 🎮
+---
+
+Enter F, R, L, B or X (in uppercase) within the game to navigate Forward, Right, Left, go Back or Exit the maze, respectively.
+
+A bird-eye view of the maze is displayed on the screen for the user. It serves as a satellite image (top elevation) of the maze and itsused for navigation within the maze.
+
+Note: The satellite image does not display the appearance of the maze from what seems to be the POV of the player, it is simply a zoom-out of the maze structure
+
+## Starting The Game
+
+To enjoy this game:
+
+1. First, you want to download the folder for the game on your compuuter. This can be done easily using a number of methods. Here's two of them: 
+   * You can either choose to download the zip file for this repo and unzip it on your computer, or 
+   * You could clone this repo to your computer.
+
+2. After you've downloaded the game folder on your computer using any of the methods above, simply open the folder and click on the `Maze.exe` file to launch.
+
+3. Sit back and Enjoy 😎
+
+These Pictures should help:****
+
+
+---
+### Written and Developed in C Programming Language by [**Suara Ayomide**](https://twitter.com/aysuarex)
