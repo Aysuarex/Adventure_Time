@@ -1,3 +1,16 @@
+/**
+ * @file treasures.c
+ * @author Suara Ayomide (aysuarex@gmail.com)
+ * 
+ * mallam_treasure - ascii art representation of the treasure in mallam's maze
+ * baluba_treasure - ascii art representation of the treasure in baluba's maze
+ * kalakuta_treasure - ascii art representation of the treasure in kalakuta maze
+ * katanga_treasure - ascii art representation of the treasure in katanga maze
+ * 
+ * @date 2022-07-01
+ * 
+ */
+
 #include <stdio.h>
 #include "main.h"
 
