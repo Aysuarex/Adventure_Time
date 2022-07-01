@@ -2,7 +2,7 @@
  * @file mallam.c
  * @author Suara Ayomide (aysuarex@gmail.com) 
  * 
- *  mallam -
+ * mallam - function that controls all player activities within the mallam maze
  * 
  * @date 2022-06-18
  */
@@ -10,13 +10,9 @@
 #include <stdio.h>
 #include <windows.h>
 #include "main.h"
-//#include <conio.h>
-
-//void mallam_pointX(); //fuction to draw the map for the mallam maze
 
 char dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7, dir8, dir9;
 char dir2A, dir2B, dir5A, dir5B, dir5C, dir6A, dir7A, dir7B, dir7C;
-
 
 void mallam()
 {
@@ -33,8 +29,8 @@ void mallam()
     printf("\tsuspects however that the great Mallam is involved in some \n");
     printf("\tshady business. This made you curious, so you decided to  \n");
     printf("\texplore the parts of the palace out of bounds to visitors. \n");
-    printf("\n\t Oh NO! The evil Mallam has caught you on the restricted halls\n");
-    printf("\tof his grand Palace and has sent his dogs after you!\n");
+    printf("\n\t Oh NO! The Mallam's guard has caught you on the restricted\n");
+    printf("\thalls of his grand Palace and has sent his dogs after you!\n");
     printf("\tThe halls of his palace are intertwined and confusing.\n");
     printf("\tOne block always unfortunately leads to another and \n");
     printf("\teven the residents sometimes don't know their way around.\n");
@@ -54,11 +50,12 @@ void mallam()
     if (proceed != 'X')
         goto mallam_maze;
     else
-        main();
-    //Sleep(1000);
-    //system("color: 0b");
-
-    mallam_maze:
+    {
+        system("cls");
+        return;
+    }
+    
+    mallam_maze: //Reference Point
 /*  Maze redrawing labelled with dir_numbers
                                      START     
                                        |       
@@ -93,10 +90,8 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
     printf("--------------------------------------------------------------\n");
     printf("The Chase Has Now Begun!");
     printf("\nYou're at your First Choice-Point ");
-    //printf("You are now inside the Maze\n");
-    //printf("Use the Map!");
 
-    point0:
+    point0: //Reference Point
     {
     printf("\nSelect a direction: \n"); //At point 0
     printf("Forward(F), Left(L) or Right(R) or exit maze(X)\n\t\t==> ");
@@ -107,7 +102,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
         system("cls");
         mallam_point1();
         printf("\nYou have come to the next Choice Point\n ");
-        point1:
+        point1: //Reference Point
         {
         printf("\nSelect a direction: \n"); //At point 1
         printf("Forward(F), Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -119,7 +114,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
             mallam_point2();
             printf("--------------------------------------------------------------\n");
             printf("\nYou have come to the next Choice Point\n ");
-            point2:
+            point2: //Reference Point
             {
             printf("\nSelect a direction: \n"); //At point 2
             printf("Forward(F) or Left(L), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -130,7 +125,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                 mallam_point3();
                 printf("--------------------------------------------------------------\n");
                 printf("\nYou have come to the next Choice Point\n ");
-                point3:
+                point3: //Reference Point
                 {
                 printf("\nSelect a direction: \n"); //At point 3
                 printf("Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -142,7 +137,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                     mallam_point4();
                     printf("--------------------------------------------------------------\n");
                     printf("\nYou have come to the next Choice Point\n ");
-                    point4:
+                    point4: //Reference Point
                     {
                     printf("\nSelect a direction: \n"); //At point 4
                     printf("Forward(F), Left(L), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -154,7 +149,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                         mallam_point5();
                         printf("--------------------------------------------------------------\n");
                         printf("\nYou have come to the next Choice Point\n ");
-                        point5:
+                        point5: //Reference Point
                         {
                         printf("\nSelect a direction: \n"); //At point 5
                         printf("Forward(F), Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -166,7 +161,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                             mallam_point6();
                             printf("--------------------------------------------------------------\n");
                             printf("\nYou have come to the next Choice Point\n ");
-                            point6:
+                            point6: //Reference Point
                             {
                             printf("\nSelect a direction: \n"); //At point 6
                             printf("Forward(F), Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -178,7 +173,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                 mallam_point7();
                                 printf("--------------------------------------------------------------\n");
                                 printf("\nYou have come to the next Choice Point\n ");
-                                point7:
+                                point7: //Reference Point
                                 {
                                 printf("\nSelect a direction: \n"); //At point 7
                                 printf("Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -190,7 +185,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                     mallam_point8();
                                     printf("--------------------------------------------------------------\n");
                                     printf("\nYou have come to the next Choice Point\n ");
-                                    point8:
+                                    point8: //Reference Point
                                     {
                                     printf("\nSelect a direction: \n"); //At point 8
                                     printf("Left(L), Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -202,7 +197,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                         mallam_point9();
                                         printf("--------------------------------------------------------------\n");
                                         printf("\nYou have come to the next Choice Point\n ");
-                                        point9:
+                                        point9: //Reference Point
                                         {
                                         printf("\nSelect a direction: \n"); //At point 9
                                         printf("Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -216,9 +211,15 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                             printf("\n\n\nEnter Any Button to Proceed: ");
                                             scanf("%s", &proceed);
                                             if (proceed != '~')
+                                            {
+                                                system("cls");
                                                 return;
+                                            }
                                             else
+                                            {
+                                                system("cls");
                                                 return;
+                                            }
                                         }
                                         else if (dir9 == 'L') //point9 left
                                         {
@@ -231,14 +232,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                         {
                                             goto mallam_start;
                                         }
-                                        //Since you cannot go forward
-                                        //else if (dir9 == 'F') //point9 forward
-                                        //{
-                                        //    printf("\nOops! Dead-end");
-                                        //    printf("\nReturning to last Choice Point...");
-                                        //    Sleep(500);
-                                        //    goto point9;
-                                        //}
                                         else if (dir9 =='B')
                                         {
                                             system("cls");
@@ -260,14 +253,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                         Sleep(500);
                                         goto point8;
                                     }
-                                    //Since you cannot go forward
-                                    //else if (dir8 == 'F') //point8 forward
-                                    //{
-                                    //    printf("\nOops! Dead-end");
-                                    //    printf("\nReturning to last Choice Point...");
-                                    //    Sleep(500);
-                                    //    goto point8;
-                                    //}
                                     else if (dir8 =='B')
                                     {
                                         system("cls");
@@ -292,7 +277,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                     mallam_point7A();
                                     printf("--------------------------------------------------------------\n");
                                     printf("\nYou have come to the next Choice Point\n ");
-                                    point7A:
+                                    point7A: //Reference Point
                                     {
                                     printf("\nSelect a direction: \n"); //At point 7A
                                     printf("Forward(F), Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -304,7 +289,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                         mallam_point7B();
                                         printf("--------------------------------------------------------------\n");
                                         printf("\nYou have come to the next Choice Point\n ");
-                                        point7B:
+                                        point7B: //Reference Point
                                         {
                                         printf("\nSelect a direction: \n"); //At point 7B
                                         printf("Forward(F), Left(L) go Back(B) or exit maze(X)\n\t\t==> ");
@@ -316,7 +301,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                             mallam_point7C();
                                             printf("--------------------------------------------------------------\n");
                                             printf("\nYou have come to the next Choice Point\n ");
-                                            point7C:
+                                            point7C: //Reference Point
                                             {
                                             printf("\nSelect a direction: \n"); //At point 7C
                                             printf("Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -336,14 +321,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                                 Sleep(500);
                                                 goto point7C;
                                             }
-                                            //Since you cannot go forward
-                                            //else if (dir7C == 'F') //point7C forward
-                                            //{
-                                            //    printf("\nOops! Dead-end");
-                                            //    printf("\nReturning to last Choice Point...");
-                                            //    Sleep(500);
-                                            //    goto point7C;
-                                            //}
                                             else if (dir7C =='B') //Back
                                             {
                                                 system("cls");
@@ -369,14 +346,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                             Sleep(500);
                                             goto point7B;
                                         }
-                                        //Since you cannot go right
-                                        //else if (dir7B == 'R') //point7B right
-                                        //{
-                                        //    printf("\nOops! Dead-end");
-                                        //    printf("\nReturning to last Choice Point...");
-                                        //    Sleep(500);
-                                        //    goto point7B;
-                                        //}
                                         else if (dir7B =='B') //Back
                                         {
                                             system("cls");
@@ -402,14 +371,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                         Sleep(500);
                                         goto point7A;
                                     }
-                                    //Since you cannot go left
-                                    //else if (dir7A == 'L') //point7A left  
-                                    //{
-                                    //    printf("\nOops! Dead-end");
-                                    //    printf("\nReturning to last Choice Point...");
-                                    //    Sleep(500);
-                                    //    goto point7A;
-                                    //}
                                     else if (dir7A =='B') //Back
                                     {
                                         system("cls");
@@ -428,14 +389,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                     }
                                     }
                                 }
-                                //Since you cannot go forward
-                                //else if (dir7 == 'F') //point7 forward
-                                //{
-                                //    printf("\nOops! Dead-end");
-                                //    printf("\nReturning to last Choice Point...");
-                                //    Sleep(500);
-                                //    goto point7;
-                                //}
                                 else if (dir7 =='B')
                                 {
                                     system("cls");
@@ -487,14 +440,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                     Sleep(500);
                                     goto point6A;
                                 }
-                                //Since you cannot go forward
-                                //else if (dir6A == 'F') //point6A forward
-                                //{
-                                //    printf("\nOops! Dead-end");
-                                //    printf("\nReturning to last Choice Point...");
-                                //    Sleep(500);
-                                //    goto point6A;
-                                //}
                                 else if (dir6A =='B') //Back
                                 {
                                     system("cls");
@@ -537,7 +482,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                             mallam_point5A();
                             printf("--------------------------------------------------------------\n");
                             printf("\nYou have come to the next Choice Point\n ");
-                            point5A:
+                            point5A: //Reference Point
                             {
                             printf("\nSelect a direction: \n"); //At point 5A
                             printf("Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -549,7 +494,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                 mallam_point5B();
                                 printf("--------------------------------------------------------------\n");
                                 printf("\nYou have come to the next Choice Point\n ");
-                                point5B:
+                                point5B: //Reference Point
                                 {
                                 printf("\nSelect a direction: \n"); //At point 5B
                                 printf("Forward(F) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -561,7 +506,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                     mallam_point5C();
                                     printf("--------------------------------------------------------------\n");
                                     printf("\nYou have come to the next Choice Point\n ");
-                                    point5C:
+                                    point5C: //Reference Point
                                     {
                                     printf("\nSelect a direction: \n"); //At point 5C
                                     printf("Forward(F), Left(L) go Back(B) or exit maze(X)\n\t\t==> ");
@@ -572,7 +517,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                         system("cls");
                                         printf("\nWOW! You found the Mallam's Hidden Treasure!");
                                         mallam_treasure();
-                                        ("\n\nThis is however still a Dead-end!");
+                                        printf("\n\nThis is however still a Dead-end!");
                                         printf("\nEnter any button to Return to the last Choice Point in the maze: \n\t==> ");
                                         scanf("%s", &proceed);
                                         if(proceed!= '~')
@@ -599,14 +544,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                         Sleep(500);
                                         goto point5C;
                                     }
-                                    //Since you cannot go right
-                                    //else if (dir5C == 'R') //point5C right
-                                    //{
-                                    //    printf("\nOops! Dead-end");
-                                    //    printf("\nReturning to last Choice Point...");
-                                    //    Sleep(500);
-                                    //    goto point5C;
-                                    //}
                                     else if (dir5C =='B') //Back
                                     {
                                         system("cls");
@@ -632,14 +569,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                     Sleep(500);
                                     goto point5B;
                                 }
-                                //Since you cannot go left
-                                //else if (dir5B == 'L') //point5B left
-                                //{
-                                //    printf("\nOops! Dead-end");
-                                //    printf("\nReturning to last Choice Point...");
-                                //    Sleep(500);
-                                //    goto point5B;
-                                //}
                                 else if (dir5B =='B') //Back
                                 {
                                     system("cls");
@@ -665,14 +594,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                                 Sleep(500);
                                 goto point5A;
                             }
-                            //Since you cannot go forward
-                            //else if (dir5A == 'F') //point5A forward
-                            //{
-                            //    printf("\nOops! Dead-end");
-                            //    printf("\nReturning to last Choice Point...");
-                            //    Sleep(500);
-                            //    goto point5A;
-                            //}
                             else if (dir5A =='B') //Back
                             {
                                 system("cls");
@@ -691,14 +612,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                             }
                             }
                         }
-                        //  Since you cannot go left
-                        //else if (dir5 == 'L') //point5 left
-                        //{
-                        //    printf("\nOops! Dead-end");
-                        //    printf("\nReturning to last Choice Point...");
-                        //    Sleep(500);
-                        //    goto point5;
-                        //}
                         else if (dir5 == 'X') //exit
                         {
                             goto mallam_start;
@@ -724,14 +637,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                         Sleep(500);
                         goto point4;
                     }
-                    //   since you cannot go to the right
-                    //   else if (dir4 == 'R') //point4 right
-                    //   {
-                    //   printf("Oops! Dead-end");
-                    //   printf(" Returning to last Choice Point...");
-                    //   Sleep(500);
-                    //   goto point4;
-                    // }
                     else if (dir4 == 'X') //exit
                     {
                         goto mallam_start;
@@ -757,14 +662,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                     Sleep(500);
                     goto point3;
                 }
-                //Since you cannot go forward
-                //else if (dir3 == 'F') //point3 forward
-                //{
-                //    printf("Oops! Dead-end");
-                //    printf(" Returning to last Choice Point...");
-                //    Sleep(500);
-                //    goto point3;
-                //}
                 else if (dir3 == 'X') //exit
                 {
                     goto mallam_start;
@@ -783,14 +680,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
                 }
                 }
             }
-            //since you cannot go to the right
-            //else if (dir2 == 'R') //point2 right
-            //{
-            //    printf("Oops! Dead-end");
-            //    printf(" Returning to last Choice Point...");
-            //    Sleep(500);
-            //    goto point2;
-            //}
             else if (dir2 == 'F') //point2 forward
             {
                 system("cls");
@@ -963,57 +852,3 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   aaaaaa
 
     return;
 }
-
-
-
-/*
-    system("cls");
-    mallam_pointX();
-    printf("--------------------------------------------------------------\n");
-    printf("\nYou have come to the next Choice Point\n ");
-    pointX:
-    {
-    printf("\nSelect a direction: \n"); //At point X
-    printf("Forward(F), Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
-    scanf("%s", &dirX);
-    
-    if (dirX == 'L') //pointX left
-    {
-        system("cls");
-        mallam_pointX();
-        printf("--------------------------------------------------------------\n");
-        printf("\nYou have come to the next Choice Point\n ");
-    }
-    else if (dirX == 'R') //pointX right
-    {
-        printf("\nOops! Dead-end");
-        printf("\nReturning to last Choice Point...\n");
-        Sleep(500);
-        goto point8;
-    }
-    //Since you cannot go forward
-    //else if (dirX == 'F') //point8 forward
-    //{
-    //    printf("\nOops! Dead-end");
-    //    printf("\nReturning to last Choice Point...");
-    //    Sleep(500);
-    //    goto point8;
-    //}
-    else if (dirX =='B') //Back
-    {
-        system("cls");
-        mallam_pointY();
-        printf("\nReturning to last Choice Point...\n");
-        goto pointY;
-    }
-    else if (dirX == 'X') //exit
-    {
-        goto mallam_start;
-    }
-    else //pointX else
-    {
-        printf("\nERROR! Invalid direction");
-        goto pointX;
-    }
-    }
-*/
