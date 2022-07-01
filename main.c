@@ -2,7 +2,7 @@
  * @file main.c
  * @author Suara Ayomide (aysuarex@gmail.com)
  * 
- * main -
+ * main - Driver function for the entire program 
  * 
  * @date 2022-06-17
  */
@@ -20,7 +20,6 @@ char choice;
 char mode;
 char button;
 
-
 void main()
 {   
     game_start();
@@ -33,6 +32,7 @@ void main()
     
     START: //Reference Point
     Sleep(500);
+    system("color 07");
     printf("\n\nWelcome Doctor %s, to Recte-Sapere-Fons Travels and Tours\n", name);
     Sleep(500);
     printf("\nSelect an option:\n");
@@ -42,7 +42,6 @@ void main()
     
     switch (mode)
     {
-
     case '1': //Story Mode
     {
         system("cls");
@@ -65,7 +64,6 @@ void main()
         if (button != 'X')
         {
             katanga_story();
-            goto END;
         }
         else
         {
@@ -73,7 +71,6 @@ void main()
             goto START;
         }
 
-        END:
         system("cls");
         printf("\n\n--------------------------------------------------------------------------------");
         printf("\n\n      I'm amazed Doc, you seem to have a nose for trouble. Like a magnet of");
@@ -94,19 +91,20 @@ void main()
         scanf("%s", &button);
 
         if (button != 'X')
+        {
             system("cls");
             goto START;
+        }
         else
+        {
             system("cls");
             goto START;
-
-        //break;
+        }
     }
-
 
     case '2': //Quick Play
     {
-        Quick_play:
+        Quick_play: //Reference Point
         system("color 07");
         printf("\n\nSelect a location of choice:\n");
         printf("A: Katanga Nation\n");
@@ -122,14 +120,12 @@ void main()
         {
         case 'A': //Katanga
         {
-            katanga:
+            katanga: //
             Sleep(500);
             system("cls");
             system("color 0A");
             
-            //printf("\n\t-------------------------------------------------------\n\n\n\n");
             katanga_pic();
-            //printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
             printf("===============================================================\n");
             printf("\nWelcome %s, to the Mighty Independent Nation of Katanga.\n", name);
             printf("\n===============================================================\n");
@@ -166,9 +162,7 @@ void main()
             system("cls");
             system("color 0D");
             
-            //printf("\n\t-------------------------------------------------------\n\n\n\n");
             baluba_pic();
-            //printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
             printf("\n\n\n===============================================================\n");
             printf("\nWelcome %s, to the Kingdom of Baluba.\n", name);
             printf("\n===============================================================\n");
@@ -205,9 +199,7 @@ void main()
             system("cls");
             system("color 0E");
             
-            //printf("\n\t-------------------------------------------------------\n\n\n\n");
             kalakuta_pic();
-            //printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
             printf("\n==================================================================\n");
             printf("\nWelcome %s, to the Prestigious Brotherhood: Kalakuta Republic\n", name);
             printf("\n==================================================================\n");
@@ -244,9 +236,7 @@ void main()
             system("cls");
             system("color 0B");
 
-            //printf("\n\t-------------------------------------------------------\n\n\n\n");
             mallam_pic();
-            //printf("\n\n\n\n\n\t-------------------------------------------------------\n\n\n");
             printf("\n===============================================================\n");
             printf("\nWelcome %s, to the Magnificent Castle of the Great Mallam\n", name);
             printf("\n===============================================================\n");
@@ -325,11 +315,8 @@ void main()
         }
         
         }
-
     break;
     }
-
-
 
     default: //Not Quick Play or Story Mode
     {
