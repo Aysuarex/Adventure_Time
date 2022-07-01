@@ -2,10 +2,10 @@
  * @file locations.c
  * @author Suara Ayomide (aysuarex@gmail.com)
  * 
- * mallam_pic -
- * baluba_pic -
- * katanga_pic -
- * kalakuta_pic - 
+ * mallam_pic - ascii art representation of mallam's palace
+ * baluba_pic - ascii art representation of baluba kingdom
+ * katanga_pic - ascii art representation of katanga nation
+ * kalakuta_pic - ascii art representation of kalakuta republic
  * 
  * @date 2022-06-22
  */
