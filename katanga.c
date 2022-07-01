@@ -2,7 +2,7 @@
  * @file katanga.c
  * @author Suara Ayomide (aysuarex@gmail.com) 
  * 
- * katanga -
+ * katanga - function that controls all player activities within the katanga maze
  * 
  * @date 2022-06-25
  */
@@ -10,8 +10,6 @@
 #include <stdio.h>
 #include <windows.h>
 #include "main.h"
-
-//void katanga_point(); //fuction to draw the map for the katanga maze
 
 char dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7, dir8, dir9, dir10, dir11, dir12, dir13;
 char dir4A, dir4B, dir4C, dir4Cii, dir4D, dir4E, dir4F, dir12A, dir12B, dir12Bii;
@@ -47,9 +45,10 @@ void katanga()
     if (proceed != 'X')
         goto katanga_maze;
     else
-        main();
-    //Sleep(1000);
-    //system("color: 0b");
+    {
+        system("cls");
+        return;
+    }
 
     katanga_maze:
 /*  Maze redrawing labelled with dir_numbers
@@ -81,10 +80,8 @@ START      0     888888888   8aaa8aaa8     13    END
     printf("--------------------------------------------------------------\n");
     printf("You have found yourself within the Katanga Maze!");
     printf("\nYou're at your First Choice-Point ");
-    //printf("You are now inside the Maze\n");
-    //printf("Use the Map!");
 
-    point0:
+    point0: //Reference Point
     {
     printf("\nSelect a direction: \n"); //At point 0
     printf("Forward(F), Left(L) or exit maze(X)\n\t\t==> ");
@@ -95,7 +92,7 @@ START      0     888888888   8aaa8aaa8     13    END
         system("cls");
         katanga_point1();
         printf("\nYou have come to the next Choice Point\n ");
-        point1:
+        point1: //Reference Point
         {
         printf("\nSelect a direction: \n"); //At point 1
         printf("Forward(F), Left(L), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -107,7 +104,7 @@ START      0     888888888   8aaa8aaa8     13    END
             katanga_point2();
             printf("--------------------------------------------------------------\n");
             printf("\nYou have come to the next Choice Point\n ");
-            point2:
+            point2: //Reference Point
             {
             printf("\nSelect a direction: \n"); //At point 2
             printf("Forward(F) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -118,7 +115,7 @@ START      0     888888888   8aaa8aaa8     13    END
                 katanga_point3();
                 printf("--------------------------------------------------------------\n");
                 printf("\nYou have come to the next Choice Point\n ");
-                point3:
+                point3: //Reference Point
                 {
                 printf("\nSelect a direction: \n"); //At point 3
                 printf("Forward(F), Left(L), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -130,7 +127,7 @@ START      0     888888888   8aaa8aaa8     13    END
                     katanga_point4();
                     printf("--------------------------------------------------------------\n");
                     printf("\nYou have come to the next Choice Point\n ");
-                    point4:
+                    point4: //Reference Point
                     {
                     printf("\nSelect a direction: \n"); //At point 4
                     printf("Left(L), Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -142,7 +139,7 @@ START      0     888888888   8aaa8aaa8     13    END
                         katanga_point5();
                         printf("--------------------------------------------------------------\n");
                         printf("\nYou have come to the next Choice Point\n ");
-                        point5:
+                        point5: //Reference Point
                         {
                         printf("\nSelect a direction: \n"); //At point 5
                         printf("Forward(F), Left(L), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -154,7 +151,7 @@ START      0     888888888   8aaa8aaa8     13    END
                             katanga_point6();
                             printf("--------------------------------------------------------------\n");
                             printf("\nYou have come to the next Choice Point\n ");
-                            point6:
+                            point6: //Reference Point
                             {
                             printf("\nSelect a direction: \n"); //At point 6
                             printf("Forward(F), Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -166,7 +163,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                 katanga_point7();
                                 printf("--------------------------------------------------------------\n");
                                 printf("\nYou have come to the next Choice Point\n ");
-                                point7:
+                                point7: //Reference Point
                                 {
                                 printf("\nSelect a direction: \n"); //At point 7
                                 printf("Forward(F) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -178,7 +175,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                     katanga_point8();
                                     printf("--------------------------------------------------------------\n");
                                     printf("\nYou have come to the next Choice Point\n ");
-                                    point8:
+                                    point8: //Reference Point
                                     {
                                     printf("\nSelect a direction: \n"); //At point 8
                                     printf("Forawrd(F), Left(L), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -190,7 +187,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                         katanga_point9();
                                         printf("--------------------------------------------------------------\n");
                                         printf("\nYou have come to the next Choice Point\n ");
-                                        point9:
+                                        point9: //Reference Point
                                         {
                                         printf("\nSelect a direction: \n"); //At point 9
                                         printf("Forward(F), or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -202,7 +199,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                             katanga_point10();
                                             printf("--------------------------------------------------------------\n");
                                             printf("\nYou have come to the next Choice Point\n ");
-                                            point10:
+                                            point10: //Reference Point
                                             {
                                             printf("\nSelect a direction: \n"); //At point 10
                                             printf("Forward(F), Left(L), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -214,7 +211,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                 katanga_point11();
                                                 printf("--------------------------------------------------------------\n");
                                                 printf("\nYou have come to the next Choice Point\n ");
-                                                point11:
+                                                point11: //Reference Point
                                                 {
                                                 printf("\nSelect a direction: \n"); //At point 11
                                                 printf("Forward(F), Left(L), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -226,7 +223,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                     katanga_point12();
                                                     printf("--------------------------------------------------------------\n");
                                                     printf("\nYou have come to the next Choice Point\n ");
-                                                    point12:
+                                                    point12: //Reference Point
                                                     {
                                                     printf("\nSelect a direction: \n"); //At point 12
                                                     printf("Forward(F), Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -238,7 +235,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                         katanga_point13();
                                                         printf("--------------------------------------------------------------\n");
                                                         printf("\nYou have come to the next Choice Point\n ");
-                                                        point13:
+                                                        point13: //Reference Point
                                                         {
                                                         printf("\nSelect a direction: \n"); //At point 13
                                                         printf("Forward(F), Left(L), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -252,9 +249,15 @@ START      0     888888888   8aaa8aaa8     13    END
                                                             printf("\n\n\n\nEnter Any Button to Proceed: ");
                                                             scanf("%s", &proceed);
                                                             if (proceed != '~')
+                                                            {
+                                                                system("cls");
                                                                 return;
+                                                            }
                                                             else
+                                                            {
+                                                                system("cls");
                                                                 return;
+                                                            }
                                                         }
                                                         else if (dir13 == 'R') //point13 right
                                                         {
@@ -263,14 +266,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                                             Sleep(500);
                                                             goto point13;
                                                         }
-                                                        //Since you cannot go forward
-                                                        //else if (dir13 == 'F') //point13 forward
-                                                        //{
-                                                        //    printf("\nOops! Dead-end");
-                                                        //    printf("\nReturning to last Choice Point...");
-                                                        //    Sleep(500);
-                                                        //    goto point13;
-                                                        //}
                                                         else if (dir13 =='B') //Back
                                                         {
                                                             system("cls");
@@ -295,7 +290,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                         katanga_point12A();
                                                         printf("--------------------------------------------------------------\n");
                                                         printf("\nYou have come to the next Choice Point\n ");
-                                                        point12A:
+                                                        point12A: //Reference Point
                                                         {
                                                         printf("\nSelect a direction: \n"); //At point 12A
                                                         printf("Forward(F) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -307,7 +302,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                             katanga_point12B();
                                                             printf("--------------------------------------------------------------\n");
                                                             printf("\nYou have come to the next Choice Point\n ");
-                                                            point12B:
+                                                            point12B: //Reference Point
                                                             {
                                                             printf("\nSelect a direction: \n"); //At point 12B
                                                             printf("Forward(F), Left(L), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -327,14 +322,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                                                 Sleep(500);
                                                                 goto point12B;
                                                             }
-                                                            //Since you cannot go to the right
-                                                            //else if (dir12B == 'R') //point8 right
-                                                            //{
-                                                            //    printf("\nOops! Dead-end");
-                                                            //    printf("\nReturning to last Choice Point...");
-                                                            //    Sleep(500);
-                                                            //    goto point12B;
-                                                            //}
                                                             else if (dir12B =='B') //Back
                                                             {
                                                                 system("cls");
@@ -359,7 +346,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                             katanga_point12Bii();
                                                             printf("--------------------------------------------------------------\n");
                                                             printf("\nYou have come to the next Choice Point\n ");
-                                                            point12Bii:
+                                                            point12Bii: //Reference Point
                                                             {
                                                             printf("\nSelect a direction: \n"); //At point 12Bii
                                                             printf("Forward(F), Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -379,14 +366,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                                                 Sleep(500);
                                                                 goto point12Bii;
                                                             }
-                                                            //Since you cannot go to the right
-                                                            //else if (dir12Bii == 'F') //point12Bii right
-                                                            //{
-                                                            //    printf("\nOops! Dead-end");
-                                                            //    printf("\nReturning to last Choice Point...");
-                                                            //    Sleep(500);
-                                                            //    goto point12Bii;
-                                                            //}
                                                             else if (dir12Bii =='B') //Back
                                                             {
                                                                 system("cls");
@@ -405,14 +384,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                                             }
                                                             }                                                        
                                                         }
-                                                        //Since you cannot go to the left
-                                                        //else if (dir12A == 'L') //point8 left
-                                                        //{
-                                                        //    printf("\nOops! Dead-end");
-                                                        //    printf("\nReturning to last Choice Point...");
-                                                        //    Sleep(500);
-                                                        //    goto point12A;
-                                                        //}
                                                         else if (dir12A =='B') //Back
                                                         {
                                                             system("cls");
@@ -431,14 +402,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                                         }
                                                         }
                                                     }
-                                                    //Since you cannot go to the left
-                                                    //else if (dir12 == 'L') //point10 left
-                                                    //{
-                                                    //    printf("\nOops! Dead-end");
-                                                    //    printf("\nReturning to last Choice Point...");
-                                                    //    Sleep(500);
-                                                    //    goto point12;
-                                                    //}
                                                     else if (dir12 =='B') //Back
                                                     {
                                                         system("cls");
@@ -464,14 +427,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                                     Sleep(500);
                                                     goto point11;
                                                 }
-                                                //Since you cannot go to the right
-                                                //else if (dir11 == 'R') //point10 right
-                                                //{
-                                                //    printf("\nOops! Dead-end");
-                                                //    printf("\nReturning to last Choice Point...");
-                                                //    Sleep(500);
-                                                //    goto point11;
-                                                //}
                                                 else if (dir11 =='B') //Back
                                                 {
                                                     system("cls");
@@ -497,14 +452,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                                 Sleep(500);
                                                 goto point10;
                                             }
-                                            //Since you cannot go to the right
-                                            //else if (dir10 == 'R') //point10 right
-                                            //{
-                                            //    printf("\nOops! Dead-end");
-                                            //    printf("\nReturning to last Choice Point...");
-                                            //    Sleep(500);
-                                            //    goto point10;
-                                            //}
                                             else if (dir10 =='B') //Back
                                             {
                                                 system("cls");
@@ -534,14 +481,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                         {
                                             goto katanga_start;
                                         }
-                                        //Since you cannot go to the left
-                                        //else if (dir9 == 'L') //point9 left
-                                        //{
-                                        //    printf("\nOops! Dead-end");
-                                        //    printf("\nReturning to last Choice Point...");
-                                        //    Sleep(500);
-                                        //    goto point9;
-                                        //}
                                         else if (dir9 =='B')
                                         {
                                             system("cls");
@@ -563,14 +502,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                         Sleep(500);
                                         goto point8;
                                     }
-                                    //Since you cannot go to the right
-                                    //else if (dir8 == 'R') //point8 right
-                                    //{
-                                    //    printf("\nOops! Dead-end");
-                                    //    printf("\nReturning to last Choice Point...");
-                                    //    Sleep(500);
-                                    //    goto point8;
-                                    //}
                                     else if (dir8 =='B')
                                     {
                                         system("cls");
@@ -596,14 +527,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                     Sleep(500);
                                     goto point7;
                                 }
-                                //Since you cannot go to the left
-                                //else if (dir7 == 'L') //point7 left
-                                //{
-                                //    printf("\nOops! Dead-end");
-                                //    printf("\nReturning to last Choice Point...");
-                                //    Sleep(500);
-                                //    goto point7;
-                                //}
                                 else if (dir7 =='B')
                                 {
                                     system("cls");
@@ -629,14 +552,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                 Sleep(500);
                                 goto point6;
                             }
-                            //Since you cannot go to the left
-                            //else if (dir6 == 'L') //point6 left
-                            //{
-                            //    printf("\nOops! Dead-end");
-                            //    printf("\nReturning to last Choice Point...");
-                            //    Sleep(500);
-                            //    goto point6;
-                            //}
                             else if (dir6 =='B')
                             {
                                 system("cls");
@@ -662,14 +577,6 @@ START      0     888888888   8aaa8aaa8     13    END
                             Sleep(500);
                             goto point5;
                         }
-                        //  Since you cannot go to the right
-                        //else if (dir5 == 'R') //point5 right
-                        //{
-                        //    printf("\nOops! Dead-end");
-                        //    printf("\nReturning to last Choice Point...");
-                        //    Sleep(500);
-                        //    goto point5;
-                        //}
                         else if (dir5 == 'X') //exit
                         {
                             goto katanga_start;
@@ -694,7 +601,7 @@ START      0     888888888   8aaa8aaa8     13    END
                         katanga_point4A();
                         printf("--------------------------------------------------------------\n");
                         printf("\nYou have come to the next Choice Point\n ");
-                        point4A:
+                        point4A: //Reference Point
                         {
                         printf("\nSelect a direction: \n"); //At point 4A
                         printf("Forward(F), Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -706,7 +613,7 @@ START      0     888888888   8aaa8aaa8     13    END
                             katanga_point4B();
                             printf("--------------------------------------------------------------\n");
                             printf("\nYou have come to the next Choice Point\n ");
-                            point4B:
+                            point4B: //Reference Point
                             {
                             printf("\nSelect a direction: \n"); //At point 4B
                             printf("Forward(F), Left(L) go Back(B) or exit maze(X)\n\t\t==> ");
@@ -718,7 +625,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                 katanga_point4C();
                                 printf("--------------------------------------------------------------\n");
                                 printf("\nYou have come to the next Choice Point\n ");
-                                point4C:
+                                point4C: //Reference Point
                                 {
                                 printf("\nSelect a direction: \n"); //At point 4C
                                 printf("Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -730,7 +637,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                     katanga_point4D();
                                     printf("--------------------------------------------------------------\n");
                                     printf("\nYou have come to the next Choice Point\n ");
-                                    point4D:
+                                    point4D: //Reference Point
                                     {
                                     printf("\nSelect a direction: \n"); //At point 4D
                                     printf("Forward(F), Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -742,7 +649,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                         katanga_point4E();
                                         printf("--------------------------------------------------------------\n");
                                         printf("\nYou have come to the next Choice Point\n ");
-                                        point4E:
+                                        point4E: //Reference Point
                                         {
                                         printf("\nSelect a direction: \n"); //At point 4E
                                         printf("Forward(F), Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -754,7 +661,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                             katanga_point4F();
                                             printf("--------------------------------------------------------------\n");
                                             printf("\nYou have come to the next Choice Point\n ");
-                                            point4F:
+                                            point4F: //Reference Point
                                             {
                                             printf("\nSelect a direction: \n"); //At point 4F
                                             printf("Forward(F), Left(L), go Back(B) or exit maze(X)\n\t\t==> ");
@@ -765,7 +672,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                                 system("cls");
                                                 printf("\nWOW! You found a long-forgotten hidden trreasure chest within the maze!");
                                                 katanga_treasure();
-                                                ("\n\nThis is however still a Dead-end!");
+                                                printf("\n\nThis is however still a Dead-end!");
                                                 printf("\nEnter any button to Return to the last Choice Point in the maze: \n\t==> ");
                                                 scanf("%s", &proceed);
                                                 if(proceed!= '~')
@@ -792,14 +699,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                                 Sleep(500);
                                                 goto point4F;
                                             }
-                                            //Since you cannot go to the right
-                                            //else if (dir4F == 'R') //point4F right
-                                            //{
-                                            //    printf("\nOops! Dead-end");
-                                            //    printf("\nReturning to last Choice Point...");
-                                            //    Sleep(500);
-                                            //    goto point4F;
-                                            //}
                                             else if (dir4F =='B') //Back
                                             {
                                                 system("cls");
@@ -824,14 +723,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                             Sleep(500);
                                             goto point4E;
                                         }
-                                        //Since you cannot go the left
-                                        //else if (dir4E == 'L') //point4E left
-                                        //{
-                                        //    printf("\nOops! Dead-end");
-                                        //    printf("\nReturning to last Choice Point...");
-                                        //    Sleep(500);
-                                        //    goto point4E;
-                                        //}
                                         else if (dir4E =='B') //Back
                                         {
                                             system("cls");
@@ -857,14 +748,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                         Sleep(500);
                                         goto point4D;
                                     }
-                                    //Since you cannot go to the left
-                                    //else if (dir4D == 'L') //point8 fleft
-                                    //{
-                                    //    printf("\nOops! Dead-end");
-                                    //    printf("\nReturning to last Choice Point...");
-                                    //    Sleep(500);
-                                    //    goto point4D;
-                                    //}
                                     else if (dir4D =='B') //Back
                                     {
                                         system("cls");
@@ -890,14 +773,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                     Sleep(500);
                                     goto point4C;
                                 }
-                                //Since you cannot go forward
-                                //else if (dir4C == 'F') //point4C forward
-                                //{
-                                //    printf("\nOops! Dead-end");
-                                //    printf("\nReturning to last Choice Point...");
-                                //    Sleep(500);
-                                //    goto point4C;
-                                //}
                                 else if (dir4C =='B') //Back
                                 {
                                     system("cls");
@@ -942,14 +817,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                     Sleep(500);
                                     goto point4Cii;
                                 }
-                                //Since you cannot go forward
-                                //else if (dir4Cii == 'F') //point4Cii forward
-                                //{
-                                //    printf("\nOops! Dead-end");
-                                //    printf("\nReturning to last Choice Point...");
-                                //    Sleep(500);
-                                //    goto point4Cii;
-                                //}
                                 else if (dir4Cii =='B') //Back
                                 {
                                     system("cls");
@@ -968,14 +835,6 @@ START      0     888888888   8aaa8aaa8     13    END
                                 }
                                 }
                             }
-                            //Since you cannot go to the right
-                            //else if (dir4B == 'R') //point4B right
-                            //{
-                            //    printf("\nOops! Dead-end");
-                            //    printf("\nReturning to last Choice Point...");
-                            //    Sleep(500);
-                            //    goto point4B;
-                            //}
                             else if (dir4B =='B') //Back
                             {
                                 system("cls");
@@ -1001,14 +860,6 @@ START      0     888888888   8aaa8aaa8     13    END
                             Sleep(500);
                             goto point4A;
                         }
-                        //Since you cannot go to the left
-                        //else if (dir4A == 'L') //point8 left
-                        //{
-                        //    printf("\nOops! Dead-end");
-                        //    printf("\nReturning to last Choice Point...");
-                        //    Sleep(500);
-                        //    goto point4A;
-                        //}
                         else if (dir4A =='B') //Back
                         {
                             system("cls");
@@ -1027,14 +878,6 @@ START      0     888888888   8aaa8aaa8     13    END
                         }
                         }   
                     }                 
-                    //   since you cannot go forward
-                    //   else if (dir4 == 'F') //point4 forward
-                    //   {
-                    //   printf("Oops! Dead-end");
-                    //   printf(" Returning to last Choice Point...");
-                    //   Sleep(500);
-                    //   goto point4;
-                    // }
                     else if (dir4 == 'X') //exit
                     {
                         goto katanga_start;
@@ -1060,14 +903,6 @@ START      0     888888888   8aaa8aaa8     13    END
                     Sleep(500);
                     goto point3;
                 }
-                //Since you cannot go to the right
-                //else if (dir3 == 'R') //point3 right
-                //{
-                //    printf("Oops! Dead-end");
-                //    printf(" Returning to last Choice Point...");
-                //    Sleep(500);
-                //    goto point3;
-                //}
                 else if (dir3 == 'X') //exit
                 {
                     goto katanga_start;
@@ -1086,14 +921,6 @@ START      0     888888888   8aaa8aaa8     13    END
                 }
                 }
             }
-            //since you cannot go to the left
-            //else if (dir2 == 'L') //point2 left
-            //{
-            //    printf("Oops! Dead-end");
-            //    printf(" Returning to last Choice Point...");
-            //    Sleep(500);
-            //    goto point2;
-            // }
             else if (dir2 == 'F') //point2 forward
             {
                 printf("\nOops! Dead-end");
@@ -1126,14 +953,6 @@ START      0     888888888   8aaa8aaa8     13    END
             Sleep(500);
             goto point1;
         }
-        /*since you cannot go to the right
-        else if (dir1 == 'R') //point1 right
-        {
-            printf("\nOops! Dead-end");
-            printf("\nReturning to last Choice Point...\n");
-            Sleep(500);
-            goto point1;
-        }*/
         else if (dir1 =='B')
         {
             system("cls");
@@ -1152,14 +971,6 @@ START      0     888888888   8aaa8aaa8     13    END
         }
         }
     }
-    /*Since you cannot go to the right
-    else if (dir0 == 'R') //point0 right
-    {
-        printf("\nOops! Dead-end");
-        printf("\nReturning to last Choice Point...\n");
-        Sleep(500);
-        goto point0;
-    }*/
     else if (dir0 == 'F') //point0 forward
     {
         printf("\nOops! Dead-end");
@@ -1180,58 +991,3 @@ START      0     888888888   8aaa8aaa8     13    END
 
     return;
 }
-
-
-
-/*
-    {
-    system("cls");
-    katanga_pointX();
-    printf("--------------------------------------------------------------\n");
-    printf("\nYou have come to the next Choice Point\n ");
-    pointX:
-    {
-    printf("\nSelect a direction: \n"); //At point X
-    printf("Forward(F), Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
-    scanf("%s", &dirX);
-    
-    if (dirX == 'L') //pointX left
-    {
-        system("cls");
-        katanga_pointX();
-        printf("--------------------------------------------------------------\n");
-        printf("\nYou have come to the next Choice Point\n ");
-    }
-    else if (dirX == 'R') //pointX right
-    {
-        printf("\nOops! Dead-end");
-        printf("\nReturning to last Choice Point...\n");
-        Sleep(500);
-        goto pointX;
-    }
-    //Since you cannot go forward
-    //else if (dirX == 'F') //pointX forward
-    //{
-    //    printf("\nOops! Dead-end");
-    //    printf("\nReturning to last Choice Point...");
-    //    Sleep(500);
-    //    goto pointX;
-    //}
-    else if (dirX =='B') //Back
-    {
-        system("cls");
-        katanga_pointY();
-        printf("\nReturning to last Choice Point...\n");
-        goto pointY;
-    }
-    else if (dirX == 'X') //exit
-    {
-        goto katanga_start;
-    }
-    else //pointX else
-    {
-        printf("\nERROR! Invalid direction");
-        goto pointX;
-    }
-    }
-*/
