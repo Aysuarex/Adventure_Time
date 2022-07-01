@@ -2,7 +2,7 @@
  * @file maps.c
  * @author Suara Ayomide (aysuarex@gmail.com)
  * 
- * kalakuta_map -
+ * kalakuta_pointX - shows the postion of the player at any point within the kalakuta maze
  * 
  * @date 2022-06-27
  */
@@ -14,7 +14,7 @@ void kalakuta_point0()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -42,7 +42,7 @@ void kalakuta_point1()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -71,7 +71,7 @@ void kalakuta_point2()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -100,7 +100,7 @@ void kalakuta_point3()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -129,7 +129,7 @@ void kalakuta_point4()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -158,7 +158,7 @@ void kalakuta_point5()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -187,7 +187,7 @@ void kalakuta_point6()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -216,7 +216,7 @@ void kalakuta_point7()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -245,7 +245,7 @@ void kalakuta_point8()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -274,7 +274,7 @@ void kalakuta_point9()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -303,7 +303,7 @@ void kalakuta_point9A()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -332,7 +332,7 @@ void kalakuta_point9B()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -361,7 +361,7 @@ void kalakuta_point9C()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -390,7 +390,7 @@ void kalakuta_point9D()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -419,7 +419,7 @@ void kalakuta_point0A()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -448,7 +448,7 @@ void kalakuta_point0B()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88     X                         88888888888888   \n"
+    "\t\t\t   88     X                       # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -477,7 +477,7 @@ void kalakuta_point0C()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                 X             88888888888888   \n"
+    "\t\t\t   88                 X           # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -506,7 +506,7 @@ void kalakuta_point0D()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                         X     88888888888888   \n"
+    "\t\t\t   88                         X   # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -535,7 +535,7 @@ void kalakuta_point9Bii()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888     X     88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
@@ -564,7 +564,7 @@ void kalakuta_point4A()
 {
     printf(
     "\n\t\t\t   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   \n"
-    "\t\t\t   88                               88888888888888   \n"
+    "\t\t\t   88                             # 88888888888888   \n"
     "\t\t\t   88aaaa   aaaaaaaaa   aaaaa   aaaa8aaa8aaa8aaa88   \n"
     "\t\t\t   888888   888888888   88888   88888           88   \n"
     "\t\t\t   88aaaa   aaaa8aaa8aaa8aaa8aaa8aaa8aaaa   aaaa88   \n"
