@@ -2,7 +2,7 @@
  * @file baluba.c
  * @author Suara Ayomide (aysuarex@gmail.com) 
  * 
- * baluba -
+ * baluba - function that controls all player activities within the baluba maze
  * 
  * @date 2022-06-26
  */
@@ -10,8 +10,6 @@
 #include <stdio.h>
 #include <windows.h>
 #include "main.h"
-
-//void baluba_pointX(); //fuction to draw the map for the baluba maze
 
 char dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7, dir8, dir9, dir10, dir11, dir12, dir13;
 char dir1A, dir2A, dir3A, dir12A, dir12B;
@@ -50,9 +48,10 @@ void baluba()
     if (proceed != 'X')
         goto baluba_maze;
     else
-        main();
-    //Sleep(1000);
-    //system("color: 0b");
+    {
+        system("cls");
+        return;
+    }
 
     baluba_maze:
 /*  Maze redrawing labelled with dir_numbers
@@ -84,8 +83,6 @@ void baluba()
     printf("--------------------------------------------------------------\n");
     printf("You are now within the Baluba kingdom Cornfield.");
     printf("\nYou're at your First Choice-Point ");
-    //printf("You are now inside the Maze\n");
-    //printf("Use the Map!");
 
     point0:
     {
@@ -255,9 +252,15 @@ void baluba()
                                                             printf("\n\n\n\nEnter Any Button to Proceed: ");
                                                             scanf("%s", &proceed);
                                                             if (proceed != '~')
+                                                            {
+                                                                system("cls");
                                                                 return;
+                                                            }
                                                             else
+                                                            {
+                                                                system("cls");
                                                                 return;
+                                                            }
                                                         }
                                                         else if (dir13 == 'R') //point13 right
                                                         {
@@ -329,14 +332,6 @@ void baluba()
                                                                 Sleep(500);
                                                                 goto point12B;
                                                             }
-                                                            //Since you cannot go forward
-                                                            //else if (dir12B == 'F') //point12B forward
-                                                            //{
-                                                            //    printf("\nOops! Dead-end");
-                                                            //    printf("\nReturning to last Choice Point...");
-                                                            //    Sleep(500);
-                                                            //    goto point12B;
-                                                            //}
                                                             else if (dir12B =='B') //Back
                                                             {
                                                                 system("cls");
@@ -362,14 +357,6 @@ void baluba()
                                                             Sleep(500);
                                                             goto point12A;
                                                         }
-                                                        //Since you cannot go to the left
-                                                        //else if (dir12A == 'L') //point12A left
-                                                        //{
-                                                        //    printf("\nOops! Dead-end");
-                                                        //    printf("\nReturning to last Choice Point...");
-                                                        //    Sleep(500);
-                                                        //    goto point12A;
-                                                        //}
                                                         else if (dir12A =='B') //Back
                                                         {
                                                             system("cls");
@@ -420,14 +407,6 @@ void baluba()
                                                     Sleep(500);
                                                     goto point11;
                                                 }
-                                                //Since you cannot go to the right
-                                                //else if (dir11 == 'R') //point10 right
-                                                //{
-                                                //    printf("\nOops! Dead-end");
-                                                //    printf("\nReturning to last Choice Point...");
-                                                //    Sleep(500);
-                                                //    goto point11;
-                                                //}
                                                 else if (dir11 =='B') //Back
                                                 {
                                                     system("cls");
@@ -453,14 +432,6 @@ void baluba()
                                                 Sleep(500);
                                                 goto point10;
                                             }
-                                            //Since you cannot go forward
-                                            //else if (dir10 == 'F') //point10 forward
-                                            //{
-                                            //    printf("\nOops! Dead-end");
-                                            //    printf("\nReturning to last Choice Point...");
-                                            //    Sleep(500);
-                                            //    goto point10;
-                                            //}
                                             else if (dir10 =='B') //Back
                                             {
                                                 system("cls");
@@ -490,14 +461,6 @@ void baluba()
                                         {
                                             goto baluba_start;
                                         }
-                                        //Since you cannot go to the right
-                                        //else if (dir9 == 'R') //point9 right
-                                        //{
-                                        //    printf("\nOops! Dead-end");
-                                        //    printf("\nReturning to last Choice Point...");
-                                        //    Sleep(500);
-                                        //    goto point9;
-                                        //}
                                         else if (dir9 =='B')
                                         {
                                             system("cls");
@@ -519,14 +482,6 @@ void baluba()
                                         Sleep(500);
                                         goto point8;
                                     }
-                                    //Since you cannot go to the left
-                                    //else if (dir8 == 'L') //point8 left
-                                    //{
-                                    //    printf("\nOops! Dead-end");
-                                    //    printf("\nReturning to last Choice Point...");
-                                    //    Sleep(500);
-                                    //    goto point8;
-                                    //}
                                     else if (dir8 =='B')
                                     {
                                         system("cls");
@@ -552,14 +507,6 @@ void baluba()
                                     Sleep(500);
                                     goto point7;
                                 }
-                                //Since you cannot go forward
-                                //else if (dir7 == 'F') //point7 forward
-                                //{
-                                //    printf("\nOops! Dead-end");
-                                //    printf("\nReturning to last Choice Point...");
-                                //    Sleep(500);
-                                //    goto point7;
-                                //}
                                 else if (dir7 =='B')
                                 {
                                     system("cls");
@@ -585,14 +532,6 @@ void baluba()
                                 Sleep(500);
                                 goto point6;
                             }
-                            //Since you cannot go to the left
-                            //else if (dir6 == 'R') //point6 right
-                            //{
-                            //    printf("\nOops! Dead-end");
-                            //    printf("\nReturning to last Choice Point...");
-                            //    Sleep(500);
-                            //    goto point6;
-                            //}
                             else if (dir6 =='B')
                             {
                                 system("cls");
@@ -650,14 +589,6 @@ void baluba()
                         Sleep(500);
                         goto point4;
                     }
-                    //   since you cannot go left
-                    //   else if (dir4 == 'L') //point4 left
-                    //   {
-                    //   printf("Oops! Dead-end");
-                    //   printf(" Returning to last Choice Point...");
-                    //   Sleep(500);
-                    //   goto point4;
-                    // }
                     else if (dir4 == 'X') //exit
                     {
                         goto baluba_start;
@@ -702,14 +633,6 @@ void baluba()
                         Sleep(500);
                         goto point3A;
                     }
-                    //Since you cannot go to the right
-                    //else if (dir3A == 'R') //point3A right
-                    //{
-                    //    printf("\nOops! Dead-end");
-                    //    printf("\nReturning to last Choice Point...");
-                    //    Sleep(500);
-                    //    goto point3A;
-                    //}
                     else if (dir3A =='B') //Back
                     {
                         system("cls");
@@ -728,14 +651,6 @@ void baluba()
                     }
                     }
                 }
-                //Since you cannot go forward
-                //else if (dir3 == 'F') //point3 forward
-                //{
-                //    printf("Oops! Dead-end");
-                //    printf(" Returning to last Choice Point...");
-                //    Sleep(500);
-                //    goto point3;
-                //}
                 else if (dir3 == 'X') //exit
                 {
                     goto baluba_start;
@@ -778,7 +693,7 @@ void baluba()
                     system("cls");
                     printf("\nWOW! You found the buried treasure chest of the people of Baluba Kingdom");
                     baluba_treasure();
-                    ("\n\nThis is however still a Dead-end!");
+                    printf("\n\nThis is however still a Dead-end!");
                     printf("\nEnter any button to Return to the last Choice Point in the maze: \n\t==> ");
                     scanf("%s", &proceed);
                     if(proceed!= '~')
@@ -805,14 +720,6 @@ void baluba()
                     Sleep(500);
                     goto point2A;
                 }
-                //Since you cannot go forward
-                //else if (dir2A == 'F') //point2A forward
-                //{
-                //    printf("\nOops! Dead-end");
-                //    printf("\nReturning to last Choice Point...");
-                //    Sleep(500);
-                //    goto point2A;
-                //}
                 else if (dir2A =='B') //Back
                 {
                     system("cls");
@@ -875,14 +782,6 @@ void baluba()
                 Sleep(500);
                 goto point1A;
             }
-            //Since you cannot go to the right
-            //else if (dir1A == 'R') //point1A right
-            //{
-            //    printf("\nOops! Dead-end");
-            //    printf("\nReturning to last Choice Point...");
-            //    Sleep(500);
-            //    goto point1A;
-            //}
             else if (dir1A =='B') //Back
             {
                 system("cls");
@@ -901,14 +800,6 @@ void baluba()
             }
             }  
         }      
-        /*since you cannot go forward
-        else if (dir1 == 'F') //point1 forward
-        {
-            printf("\nOops! Dead-end");
-            printf("\nReturning to last Choice Point...\n");
-            Sleep(500);
-            goto point1;
-        }*/
         else if (dir1 =='B')
         {
             system("cls");
@@ -927,14 +818,6 @@ void baluba()
         }
         }
     }
-    /*Since you cannot go to the left
-    else if (dir0 == 'L') //point0 left
-    {
-        printf("\nOops! Dead-end");
-        printf("\nReturning to last Choice Point...\n");
-        Sleep(500);
-        goto point0;
-    }*/
     else if (dir0 == 'F') //point0 forward
     {
         printf("\nOops! Dead-end");
@@ -955,58 +838,3 @@ void baluba()
 
     return;
 }
-
-
-
-/*
-    {
-    system("cls");
-    baluba_pointX();
-    printf("--------------------------------------------------------------\n");
-    printf("\nYou have come to the next Choice Point\n ");
-    pointX:
-    {
-    printf("\nSelect a direction: \n"); //At point X
-    printf("Forward(F), Left(L) or Right(R), go Back(B) or exit maze(X)\n\t\t==> ");
-    scanf("%s", &dirX);
-    
-    if (dirX == 'L') //pointX left
-    {
-        system("cls");
-        baluba_pointX();
-        printf("--------------------------------------------------------------\n");
-        printf("\nYou have come to the next Choice Point\n ");
-    }
-    else if (dirX == 'R') //pointX right
-    {
-        printf("\nOops! Dead-end");
-        printf("\nReturning to last Choice Point...\n");
-        Sleep(500);
-        goto point8;
-    }
-    //Since you cannot go forward
-    //else if (dirX == 'F') //point8 forward
-    //{
-    //    printf("\nOops! Dead-end");
-    //    printf("\nReturning to last Choice Point...");
-    //    Sleep(500);
-    //    goto point8;
-    //}
-    else if (dirX =='B') //Back
-    {
-        system("cls");
-        baluba_pointX();
-        printf("\nReturning to last Choice Point...\n");
-        goto pointY;
-    }
-    else if (dirX == 'X') //exit
-    {
-        goto baluba_start;
-    }
-    else //pointX else
-    {
-        printf("\nERROR! Invalid direction");
-        goto pointX;
-    }
-    }
-*/
