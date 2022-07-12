@@ -670,7 +670,7 @@ START      0     888888888   8aaa8aaa8     13    END
                                             if (dir4F == 'L') //point4F left
                                             {   //Treasure
                                                 system("cls");
-                                                printf("\nWOW! You found a long-forgotten hidden trreasure chest within the maze!");
+                                                printf("\nWOW! You found a long-forgotten hidden treasure chest within the maze!");
                                                 katanga_treasure();
                                                 printf("\n\nThis is however still a Dead-end!");
                                                 printf("\nEnter any button to Return to the last Choice Point in the maze: \n\t==> ");
